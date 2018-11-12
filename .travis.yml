@@ -24,8 +24,4 @@ jobs:
             only:
               - master
 after_deploy:
-  - git checkout master
-  - git pull origin master
-  - git checkout dev
-  - git merge master
-  - git push "https://${GH_TOKEN}@github.com/doc-kit/ui.git" dev > /dev/null 2>&1
+  - .ci/sync.sh
