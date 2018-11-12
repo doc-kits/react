@@ -1,3 +1,11 @@
+## [1.0.4](https://github.com/doc-kit/ui/compare/v1.0.3...v1.0.4) (2018-11-12)
+
+
+### Bug Fixes
+
+* **core:** gg ([#16](https://github.com/doc-kit/ui/issues/16)) ([c2bf7be](https://github.com/doc-kit/ui/commit/c2bf7be))
+* **core:** trr ([#15](https://github.com/doc-kit/ui/issues/15)) ([8221daf](https://github.com/doc-kit/ui/commit/8221daf))
+
 ## [1.0.3](https://github.com/doc-kit/ui/compare/v1.0.2...v1.0.3) (2018-11-12)
 
 
