@@ -25,8 +25,8 @@ jobs:
               - master
 after_deploy:
   - git remote
-  - git config user.email ${EMAIL}
-  - git config user.name ${USER}
+  - git config user.email "travis@travis-ci.org"
+  - git config user.name "Travis CI"
   - git checkout dev
   - git merge master
   - git push origin dev
