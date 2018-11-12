@@ -5,6 +5,9 @@ stages:
   - lint
   - test
   - release
+branches:
+  only:
+    - master
 jobs:
   include:
     - stage: lint
