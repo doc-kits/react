@@ -1,3 +1,10 @@
+## [1.0.11](https://github.com/doc-kit/ui/compare/v1.0.10...v1.0.11) (2018-11-12)
+
+
+### Bug Fixes
+
+* **core:** jfekla ([#23](https://github.com/doc-kit/ui/issues/23)) ([52ff203](https://github.com/doc-kit/ui/commit/52ff203))
+
 ## [1.0.10](https://github.com/doc-kit/ui/compare/v1.0.9...v1.0.10) (2018-11-12)
 
 
