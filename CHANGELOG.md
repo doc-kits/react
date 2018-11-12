@@ -1,3 +1,10 @@
+## [1.0.14](https://github.com/doc-kit/ui/compare/v1.0.13...v1.0.14) (2018-11-12)
+
+
+### Bug Fixes
+
+* **core:** fda ([#26](https://github.com/doc-kit/ui/issues/26)) ([8139009](https://github.com/doc-kit/ui/commit/8139009))
+
 ## [1.0.13](https://github.com/doc-kit/ui/compare/v1.0.12...v1.0.13) (2018-11-12)
 
 
