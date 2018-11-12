@@ -5,6 +5,8 @@ stages:
   - lint
   - test
   - release
+before_install:
+  - chmod +x ./.ci/sync.sh
 jobs:
   include:
     - stage: lint
