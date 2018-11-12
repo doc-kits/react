@@ -24,6 +24,9 @@ jobs:
             only:
               - master
 after_deploy:
+  - git remote
+  - git config user.email ${EMAIL}
+  - git config user.name ${USER}
   - git checkout dev
   - git merge master
   - git push origin dev
