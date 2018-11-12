@@ -7,11 +7,12 @@ setup_git() {
 
 update_dev_branch() {
   git branch
+  git remote
   git checkout master
   git pull origin master
-  git checkout dev
+  git checkout origin/dev
   git merge master
-  git push "https://${GH_TOKEN}@github.com/doc-kit/ui.git" dev > /dev/null 2>&1
+  git push "https://${GH_TOKEN}@github.com/doc-kit/ui.git" origin/dev > /dev/null 2>&1
 }
 
 setup_git
