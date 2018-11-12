@@ -23,7 +23,7 @@ jobs:
           branches:
             only:
               - master
-after_success:
-  - git checkout dev
-  - git merge master
-  - git push origin dev
+        after_success:
+          - git checkout dev
+          - git merge master
+          - git push origin dev
