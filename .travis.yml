@@ -24,4 +24,4 @@ jobs:
             only:
               - master
 after_deploy:
-  - .ci/sync.sh
+  - ./.ci/sync.sh
