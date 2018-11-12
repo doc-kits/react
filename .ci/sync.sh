@@ -6,6 +6,7 @@ setup_git() {
 }
 
 update_dev_branch() {
+  git fetch
   git checkout master
   git pull origin master
   git checkout dev
