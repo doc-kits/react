@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/doc-kit/ui/compare/v1.0.6...v1.0.7) (2018-11-12)
+
+
+### Bug Fixes
+
+* **core:** uu ([#19](https://github.com/doc-kit/ui/issues/19)) ([a51b90a](https://github.com/doc-kit/ui/commit/a51b90a))
+
 ## [1.0.6](https://github.com/doc-kit/ui/compare/v1.0.5...v1.0.6) (2018-11-12)
 
 
