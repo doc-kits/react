@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/doc-kit/ui/compare/v1.0.4...v1.0.5) (2018-11-12)
+
+
+### Bug Fixes
+
+* **core:** dd ([#17](https://github.com/doc-kit/ui/issues/17)) ([648a5ed](https://github.com/doc-kit/ui/commit/648a5ed))
+
 ## [1.0.4](https://github.com/doc-kit/ui/compare/v1.0.3...v1.0.4) (2018-11-12)
 
 
