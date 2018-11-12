@@ -1,3 +1,12 @@
+## [1.0.2](https://github.com/doc-kit/ui/compare/v1.0.1...v1.0.2) (2018-11-12)
+
+
+### Bug Fixes
+
+* **core:** thing ([#10](https://github.com/doc-kit/ui/issues/10)) ([3b8284f](https://github.com/doc-kit/ui/commit/3b8284f))
+* **core:** tt ([#11](https://github.com/doc-kit/ui/issues/11)) ([8052ee6](https://github.com/doc-kit/ui/commit/8052ee6))
+* **core:** ttr ([#12](https://github.com/doc-kit/ui/issues/12)) ([d3081cf](https://github.com/doc-kit/ui/commit/d3081cf))
+
 ## [1.0.1](https://github.com/doc-kit/ui/compare/v1.0.0...v1.0.1) (2018-11-12)
 
 
