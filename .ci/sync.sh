@@ -5,20 +5,15 @@ setup_git() {
   git config --global user.name "Travis CI"
 }
 
-setup_remote() {
-   git remote add upstream "https://${GH_TOKEN}@github.com/doc-kit/ui.git" > /dev/null 2>&1
-}
-
 sync_dev_branch() {
+  git remote -v
   git branch
-  git remote
-  git checkout origin/master
-  git pull origin origin/master
-  git checkout upstream/dev
-  git merge origin/master
-  git push upstream dev
+  git checkout master
+  git pull origin master
+  git checkout dev
+  git merge master
+  git push origin dev
 }
 
 setup_git
-setup_remote
 sync_dev_branch

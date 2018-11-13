@@ -7,6 +7,9 @@ stages:
   - release
 before_install:
   - chmod +x ./.ci/sync.sh
+install:
+  - git config remote.origin.fetch +refs/heads/*:refs/remotes/origin/*
+  - git fetch --unshallow --tags
 jobs:
   include:
     - stage: lint
