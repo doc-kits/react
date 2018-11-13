@@ -6,7 +6,7 @@ setup_git() {
 }
 
 update_dev_branch() {
-  git remote -v
+  git remote
   git branch
   git checkout master
   git pull origin master
