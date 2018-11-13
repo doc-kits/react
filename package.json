@@ -1,6 +1,6 @@
 {
   "name": "@doc-kit/ui",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "A collection of React UI components to enhance documentation",
   "license": "MIT",
   "main": "dist/index.js",
