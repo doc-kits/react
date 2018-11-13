@@ -5,9 +5,8 @@ setup_git() {
   git config --global user.name "Travis CI"
 }
 
-update_dev_branch() {
-  git remote
-  git branch
+# Syncs dev branch even with master after release
+sync() {
   git checkout master
   git pull origin master
   git checkout dev
@@ -16,4 +15,4 @@ update_dev_branch() {
 }
 
 setup_git
-update_dev_branch
+sync
