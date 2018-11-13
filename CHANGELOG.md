@@ -1,3 +1,11 @@
+## [1.0.15](https://github.com/doc-kit/ui/compare/v1.0.14...v1.0.15) (2018-11-13)
+
+
+### Bug Fixes
+
+* **core:** hg ([#27](https://github.com/doc-kit/ui/issues/27)) ([db8ea32](https://github.com/doc-kit/ui/commit/db8ea32))
+* **core:** ok ([#28](https://github.com/doc-kit/ui/issues/28)) ([cea071e](https://github.com/doc-kit/ui/commit/cea071e))
+
 ## [1.0.14](https://github.com/doc-kit/ui/compare/v1.0.13...v1.0.14) (2018-11-12)
 
 
