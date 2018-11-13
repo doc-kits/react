@@ -27,5 +27,5 @@ jobs:
           branches:
             only:
               - master
-        after_success:
-          - ./.ci/sync.sh
+      after_success:
+        - ./.ci/sync.sh
