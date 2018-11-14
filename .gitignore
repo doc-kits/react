@@ -3,7 +3,7 @@
 .cache
 .npmrc
 node_modules
-dist
+lib
 coverage
 yarn-debug.log*
 yarn-error.log*

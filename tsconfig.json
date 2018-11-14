@@ -5,12 +5,12 @@
     "skipLibCheck": true,
     "jsx": "react",
     "declaration": true,
-    "noEmit": true,
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true
-  }
+  },
+  "exclude": ["src/setupEnzyme.ts", "src/**/*.test.tsx", "src/**/*.stories.tsx"]
 }

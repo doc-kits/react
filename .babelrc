@@ -8,6 +8,7 @@
     "@babel/proposal-class-properties",
     "@babel/proposal-object-rest-spread"
   ],
+  "ignore": ["src/**/*.stories.tsx", "src/**/*.test.tsx", "src/setupEnzyme.ts"],
   "env": {
     "production": {
       "plugins": [["emotion", { "hoist": true }]]
