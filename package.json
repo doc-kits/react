@@ -3,7 +3,7 @@
   "version": "1.0.20",
   "description": "A collection of React UI components to enhance documentation",
   "license": "MIT",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "homepage": "https://github.com/doc-kit/ui#readme",
   "repository": {
     "type": "git",
@@ -26,11 +26,14 @@
     "ui"
   ],
   "files": [
-    "dist"
+    "lib"
   ],
   "scripts": {
-    "build": "babel src -d dist --extensions '.ts,.tsx'",
-    "ts": "tsc",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:babel": "babel src -d lib --extensions '.ts,.tsx' --source-maps inline",
+    "build": "yarn build:types && yarn build:babel",
+    "ts": "tsc --noEmit",
+    "ts:watch": "yarn ts --watch",
     "lint": "tslint --project .",
     "lint:fix": "tslint --fix --project .",
     "prettier:fix": "prettier \"**/*.{ts,tsx}\" --write",
@@ -107,7 +110,7 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "yarn lint:fix",
+      "tslint --fix",
       "yarn prettier:fix",
       "git add"
     ]
