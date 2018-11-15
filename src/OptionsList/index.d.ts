@@ -1,1 +1,1 @@
-export * from './OptionsList';
+export { default as OptionsList } from './OptionsList';
