@@ -1,1 +1,1 @@
-export * from './OptionsList';
+export { OptionsList } from './OptionsList';
