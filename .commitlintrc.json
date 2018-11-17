@@ -1,0 +1,6 @@
+{
+  "extends": ["@commitlint/config-angular"],
+  "rules": {
+    "scope-enum": [2, "always", ["options-list"]]
+  }
+}
