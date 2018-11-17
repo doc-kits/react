@@ -23,7 +23,8 @@
     "react",
     "react-components",
     "doc-kit",
-    "ui"
+    "ui",
+    "typescript"
   ],
   "files": [
     "lib"
@@ -62,6 +63,7 @@
     "@storybook/addons": "^4.0.4",
     "@storybook/cli": "^4.0.4",
     "@storybook/react": "^4.0.4",
+    "@types/classnames": "^2.2.6",
     "@types/enzyme": "^3.1.14",
     "@types/enzyme-adapter-react-16": "^1.0.3",
     "@types/jest": "^23.3.9",
@@ -71,6 +73,7 @@
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.4",
     "babel-plugin-emotion": "^9.2.11",
+    "classnames": "^2.2.6",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
     "husky": "^1.1.3",

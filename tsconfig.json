@@ -7,10 +7,12 @@
     "declaration": true,
     "strict": true,
     "noImplicitAny": true,
-    "strictNullChecks": true,
-    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
     "noUnusedParameters": true,
-    "noImplicitReturns": true
+    "noEmitOnError": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true
   },
   "exclude": ["src/setupEnzyme.ts", "src/**/*.test.tsx", "src/**/*.stories.tsx"]
 }
