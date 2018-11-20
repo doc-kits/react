@@ -8,5 +8,4 @@ responseRequiredLabel: 'more info needed'
 
 # Comment to post when closing an Issue for lack of response. Set to `false` to disable
 closeComment: >
-  This issue has been automatically closed because there has been no response
-  to our request for more information from the original author. Without more information we are unable to investigate further.
+  This issue has been automatically closed because there has been no response to our request for more information from the original author. Without more information we are unable to investigate further.
