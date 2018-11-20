@@ -1,0 +1,6 @@
+# Configuration for autolabeler - https://github.com/probot/autolabeler
+
+components: ['/src']
+documentation: ['/docs']
+example: ['/examples']
+tooling: ['./*.js', './*.json', './*.yml', '.github', '.ci', '.storybook']
