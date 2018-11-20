@@ -1,0 +1,13 @@
+# Configuration for auto-comment - https://probot.github.io/apps/auto-comment/
+
+# Comment to a new issue.
+issueOpened: >
+  Thank you for opening an issue.
+
+  Please ensure that you have provided the requested information within the issue template in as much detail as possible.
+
+# Comment to a new pull request.
+pullRequestOpened: >
+  Thank your for raising your pull request.
+
+  Please make sure you have followed our contributing guidelines and have filled in the pull request template. We will review your pull request soon.
