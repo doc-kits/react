@@ -3,4 +3,15 @@
 components: ['/src']
 documentation: ['/docs']
 example: ['/examples']
-tooling: ['./*.js', './*.json', './*.yml', '.github', '.ci', '.storybook']
+tooling:
+  [
+    './*.js',
+    './.*.js',
+    './*.json',
+    './.*.json',
+    './*.yml',
+    './.*.yml',
+    '.github',
+    '.ci',
+    '.storybook',
+  ]
