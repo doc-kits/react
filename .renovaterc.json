@@ -2,11 +2,11 @@
   "extends": [
     "config:base",
     "schedule:earlyMondays",
+    ":semanticCommitTypeAll(ci)",
     ":semanticCommitScopeDisabled"
   ],
   "rangeStrategy": "pin",
   "baseBranches": ["dev"],
   "commitBody": "[skip ci]",
-  "semanticCommitType": "ci",
   "separateMultipleMajor": true
 }
