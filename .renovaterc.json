@@ -3,7 +3,8 @@
     "config:base",
     "schedule:earlyMondays",
     ":semanticCommitTypeAll(ci)",
-    ":semanticCommitScopeDisabled"
+    ":semanticCommitScopeDisabled",
+    ":pinAllExceptPeerDependencies"
   ],
   "rangeStrategy": "pin",
   "baseBranches": ["dev"],
