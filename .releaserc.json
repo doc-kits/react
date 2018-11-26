@@ -1,5 +1,5 @@
 {
-  "repositoryUrl": "https://github.com/doc-kit/ui.git",
+  "repositoryUrl": "https://github.com/shockits/doc-ui.git",
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
@@ -13,7 +13,7 @@
     [
       "@semantic-release/git",
       {
-        "message": "ci: publish ${nextRelease.version} [skip ci]"
+        "message": "ci: publish ${nextRelease.version}\n\n[skip ci]"
       }
     ],
     "@semantic-release/github"
