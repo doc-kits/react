@@ -1,6 +1,6 @@
 {
   "name": "@shockits/doc-ui",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A collection of React UI components to enhance documentation",
   "license": "MIT",
   "main": "lib/index.js",
