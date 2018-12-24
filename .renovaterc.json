@@ -8,6 +8,5 @@
   ],
   "rangeStrategy": "pin",
   "baseBranches": ["dev"],
-  "commitBody": "[skip ci]",
   "separateMultipleMajor": true
 }
