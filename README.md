@@ -1,6 +1,14 @@
-<div style="text-align: center;">
-  <img src="https://raw.githubusercontent.com/meebix/files/master/logo.png" width="500">
-</div>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/shockits/doc-ui/dev/images/logo.png?raw=true" width="500">
+</p>
+
+<p align="center">
+  <img src="https://badgen.net/npm/v/shockits/doc-ui" alt="Version">
+  <img src="https://badgen.net/badge/license/MIT/blue" alt="License">
+  <img src="https://badgen.net/david/dep/shockits/doc-ui" alt="Dependencies">
+  <img src="https://badgen.net/packagephobia/publish/shockits/doc-ui" alt="Package Size">
+  <img src="https://badgen.net/travis/shockits/doc-ui" alt="CI Build">
+</p>
 
 ## ⬇️ Install
 
@@ -14,9 +22,9 @@ Via Yarn or NPM:
 
 `import { OptionList } from '@shockits/doc-ui';`
 
-Each UI component can be destructured from the library. For more information on the usage of individual components, refer to their individual [README files]() or pop open our [Storybook]().
+Each UI component can be destructured from the library. For more information on the usage of individual components, refer to their individual README files or pop open our [Storybook]().
 
-You may also review our [examples]().
+You may also review our [examples](https://github.com/shockits/doc-ui/tree/master/examples).
 
 ## 💅 Features
 
