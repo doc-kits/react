@@ -1,18 +1,27 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "skipLibCheck": true,
-    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
     "declaration": true,
-    "strict": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "noImplicitReturns": true,
-    "noUnusedParameters": true,
+    "jsx": "react",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "noEmit": true,
     "noEmitOnError": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedParameters": true,
+    "skipLibCheck": true,
+    "strict": true,
     "strictNullChecks": true,
-    "strictPropertyInitialization": true
+    "strictPropertyInitialization": true,
+    "target": "es6"
   },
-  "exclude": ["src/setupEnzyme.ts", "src/**/*.test.tsx", "src/**/*.stories.tsx"]
+  "include": ["src/**/*"],
+  "exclude": [
+    "src/setupEnzyme.ts",
+    "src/**/*.test.tsx",
+    "src/**/*.stories.tsx",
+    "lib"
+  ]
 }
