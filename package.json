@@ -1,9 +1,10 @@
 {
   "name": "@shockits/doc-ui",
   "version": "1.1.0",
-  "description": "A collection of React UI components to enhance documentation",
+  "description": "A collection of React UI components to enhance your documentation.",
   "license": "MIT",
   "main": "lib/index.js",
+  "typings": "lib/typings.d.ts",
   "homepage": "https://github.com/shockits/doc-ui#readme",
   "repository": {
     "type": "git",
@@ -31,9 +32,9 @@
     "lib"
   ],
   "scripts": {
+    "build:babel": "babel src -d lib --extensions '.ts,.tsx'",
     "build:types": "tsc --emitDeclarationOnly",
-    "build:babel": "babel src -d lib --source-maps inline",
-    "build": "yarn build:types && yarn build:babel",
+    "build": "yarn build:babel && yarn build:types",
     "ts": "tsc --noEmit",
     "ts:watch": "yarn ts --watch",
     "lint": "tslint --project . && stylelint 'src/**/*.tsx'",
@@ -118,7 +119,6 @@
   "engines": {
     "node": ">=10.13.0"
   },
-  "typings": "./src/typings.d.ts",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
