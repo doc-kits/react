@@ -41,12 +41,13 @@ The `<type>` must be one of the following values:
 - **docs**: changes to documentation.
 - **build**: changes that affect the build system or external dependencies.
 - **ci**: changes to our CI configuration files and scripts.
+- **chore**: housekeeping changes that do not affect production.
 
 ### Scope
 
 The `<scope>` is the name of the component or area of the codebase that was affected by the change. Notice, it is enclosed in parentheses. It must be one of the following:
 
-- **core**
+- **toolkit**
 - **options-list**
 
 ### Subject
@@ -95,7 +96,7 @@ feat: add changelog automation
 ```
 fix(options-list): removal of props
 
-The props are no longer necessary on the OptionsList component.
+The props are no longer necessary on the OptionList component.
 
 - Remove prop A
 - Remove prop B
@@ -106,7 +107,7 @@ fixes #15, #16
 **With breaking changes**
 
 ```
-refactor(core): change storybook webpack config
+refactor: change storybook webpack config
 
 The storybook webpack config must exclude node_modules.
 

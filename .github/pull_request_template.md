@@ -11,6 +11,7 @@ Please fill in the template below before submitting your pull request. This help
 - [ ] Documentation: changes to documentation.
 - [ ] Build: changes that affect the build system or external dependencies.
 - [ ] CI: changes to our CI configuration files and scripts.
+- [ ] Chore: housekeeping changes that do not affect production.
 
 #### Changes
 
