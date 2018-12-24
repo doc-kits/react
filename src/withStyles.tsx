@@ -7,7 +7,7 @@ const withStyles = (styles: object) => (WrappedComponent: any): any => {
 
   class WithStyles extends React.Component {
     public render() {
-      return <WrappedComponent {...this.props} wrappedStyles={styles} />;
+      return <WrappedComponent {...this.props} localStyles={styles} />;
     }
   }
 
