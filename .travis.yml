@@ -21,7 +21,7 @@ jobs:
       deploy:
         provider: script
         skip_cleanup: true
-        github-token: $GITHUB_TOKEN
+        github-token: $GH_TOKEN
         script:
           - yarn storybook:build &&
             yarn storybook:deploy &&
