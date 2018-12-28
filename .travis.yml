@@ -22,7 +22,7 @@ jobs:
         provider: script
         skip_cleanup: true
         script:
-          - ./.ci/deploy.sh
+          - yarn storybook:build && yarn storybook:deploy && yarn semantic-release
         on:
           branches:
             only:
