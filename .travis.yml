@@ -24,7 +24,7 @@ jobs:
         github-token: $GH_TOKEN
         script:
           - yarn storybook:build &&
-            yarn storybook:deploy -r 'https://' + $GH_TOKEN + 'github.com/shockits/doc-ui.git' &&
+            yarn storybook:deploy -r 'https://$GH_TOKEN@github.com/shockits/doc-ui.git' &&
             yarn semantic-release
         on:
           branches:
