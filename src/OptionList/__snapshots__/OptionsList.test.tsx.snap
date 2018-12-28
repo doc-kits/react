@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<OptionList /> should render with all available passed in options 1`] = `
+<div
+  className="css-qwwh84"
+>
+  <div
+    className="css-7zhfhb"
+  >
+    Arguments
+  </div>
+  <div
+    className="css-1uxy4lo"
+  >
+    <div
+      className="css-m1kwjs"
+    >
+      <div
+        className="css-7zhfhb"
+      >
+        align-content
+      </div>
+      <div
+        className="css-1pzfe1o"
+        required={true}
+      >
+        required
+      </div>
+      <div
+        className="css-7zhfhb"
+      >
+        string
+      </div>
+    </div>
+    <p
+      className="css-7zhfhb"
+    >
+      <span>
+        The reason given for the 
+        <a
+          href="#"
+        >
+          cancellation
+        </a>
+         by the member support employee.
+         
+      </span>
+      <span>
+        The default value is 
+        <code
+          className="css-7zhfhb"
+        >
+          stretch
+        </code>
+        .
+      </span>
+      <span>
+         Possible values are 
+      </span>
+      <span
+        className="css-idza5k"
+      >
+        <span>
+          <code
+            className="css-7zhfhb"
+          >
+            stretch
+          </code>
+        </span>
+        <span>
+          <code
+            className="css-7zhfhb"
+          >
+            start
+          </code>
+        </span>
+        <span>
+          <code
+            className="css-7zhfhb"
+          >
+            end
+          </code>
+        </span>
+        .
+      </span>
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<OptionList /> should render with min requirements 1`] = `
+<div
+  className="css-qwwh84"
+>
+  <div
+    className="css-7zhfhb"
+  >
+    Options
+  </div>
+  <div
+    className="css-1uxy4lo"
+  >
+    <div
+      className="css-m1kwjs"
+    >
+      <div
+        className="css-7zhfhb"
+      >
+        align-content
+      </div>
+      <div
+        className="css-ml94ed"
+      >
+        optional
+      </div>
+      <div
+        className="css-7zhfhb"
+      >
+        string
+      </div>
+    </div>
+    <p
+      className="css-7zhfhb"
+    >
+      <span>
+         
+      </span>
+    </p>
+  </div>
+</div>
+`;

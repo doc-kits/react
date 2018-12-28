@@ -5,6 +5,7 @@ module.exports = {
       tsConfig: 'tsconfig.json',
     },
   },
+  collectCoverage: true,
   coverageDirectory: 'coverage',
   coverageThreshold: {
     global: {

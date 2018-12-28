@@ -11,10 +11,10 @@
   "ignore": ["src/**/*.stories.tsx", "src/**/*.test.tsx", "src/setupEnzyme.ts"],
   "env": {
     "production": {
-      "plugins": [["emotion", { "hoist": true }]]
+      "plugins": ["emotion"]
     },
     "development": {
-      "plugins": [["emotion", { "sourceMap": true, "autoLabel": true }]]
+      "plugins": [["emotion", { "sourceMap": true }]]
     }
   }
 }
