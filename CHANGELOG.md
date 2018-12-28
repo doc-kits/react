@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/shockits/doc-ui/compare/v1.1.0...v1.2.0) (2018-12-28)
+
+
+### Features
+
+* add option list component ([#80](https://github.com/shockits/doc-ui/issues/80)) ([7b237c7](https://github.com/shockits/doc-ui/commit/7b237c7))
+
 # [1.1.0](https://github.com/shockits/doc-ui/compare/v1.0.0...v1.1.0) (2018-12-24)
 
 
