@@ -21,8 +21,11 @@ jobs:
       deploy:
         provider: script
         skip_cleanup: true
+        github-token: $GITHUB_TOKEN
         script:
-          - yarn storybook:build && yarn storybook:deploy && yarn semantic-release
+          - yarn storybook:build &&
+            yarn storybook:deploy &&
+            yarn semantic-release
         on:
           branches:
             only:
