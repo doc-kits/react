@@ -1,16 +1,14 @@
 # Configuration for autolabeler - https://github.com/probot/autolabeler
 
 components: ['/src']
-documentation: ['/docs']
+documentation: ['*.md']
 example: ['/examples']
 tooling:
   [
-    './*.js',
-    './.*.js',
-    './*.json',
-    './.*.json',
-    './*.yml',
-    './.*.yml',
+    '.babelrc',
+    'jest.config.js'
+    '*.json',
+    '*.yml',
     '.github',
     '.ci',
     '.storybook',
