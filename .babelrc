@@ -1,20 +1,13 @@
 {
   "presets": [
-    ["@babel/env", { "targets": "last 2 versions", "loose": true }],
+    ["@babel/env", { "modules": "cjs" }],
     "@babel/preset-typescript",
     "@babel/preset-react"
   ],
   "plugins": [
+    "emotion",
     "@babel/proposal-class-properties",
     "@babel/proposal-object-rest-spread"
   ],
-  "ignore": ["src/**/*.stories.tsx", "src/**/*.test.tsx", "src/setupEnzyme.ts"],
-  "env": {
-    "production": {
-      "plugins": ["emotion"]
-    },
-    "development": {
-      "plugins": [["emotion", { "sourceMap": true }]]
-    }
-  }
+  "ignore": ["src/**/*.stories.tsx", "src/**/*.test.tsx", "src/setupEnzyme.ts"]
 }

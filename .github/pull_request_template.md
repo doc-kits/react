@@ -3,7 +3,7 @@ Please fill in the template below before submitting your pull request. This help
 #### Metadata
 
 - [ ] Feature: a new feature.
-- [ ] Bug: a bug fix.
+- [ ] Fix: a bug fix.
 - [ ] Refactor: a code change that neither fixes a bug nor adds a feature.
 - [ ] Style: changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc.).
 - [ ] Test: adding missing tests or correcting existing tests.
