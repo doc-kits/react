@@ -1,0 +1,32 @@
+---
+name: Option List
+---
+
+import { OptionList } from '@shockits/doc-ui';
+
+# Option List
+
+Below I have use [Doc UI](https://github.com/shockits/doc-ui) to integrate a React component into the Docz documentation engine!
+
+<OptionList
+  definitions={[
+    {
+      key: 'cancellation_reason',
+      required: false,
+      type: 'string',
+      description: [
+        'The reason given for the ',
+        <a href="#" key="link">
+          cancellation
+        </a>,
+        ' by the member support employee.',
+      ],
+      default: 'null',
+      values: [
+        'duplicate',
+        'fraudulent',
+        'requested_by_customer',
+      ],
+    }
+  ]}
+/>

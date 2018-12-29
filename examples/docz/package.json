@@ -1,0 +1,19 @@
+{
+  "name": "docz-test-app",
+  "version": "1.0.0",
+  "description": "Testing Doc UI integration with Docz",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "docz:dev": "docz dev",
+    "docz:build": "docz build"
+  },
+  "devDependencies": {
+    "@shockits/doc-ui": "https://github.com/shockits/doc-ui.git",
+    "docz": "^0.13.7",
+    "docz-theme-default": "^0.13.7",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  },
+  "dependencies": {}
+}
