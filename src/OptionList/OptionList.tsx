@@ -1,7 +1,6 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import styled from '@emotion/styled';
 import * as merge from 'deepmerge';
+import * as React from 'react';
 import { ThemeProvider } from 'emotion-theming';
 import { mq } from '../toolkit/responsive';
 import settings from '../toolkit/settings';

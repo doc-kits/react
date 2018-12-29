@@ -104,7 +104,7 @@ The props are no longer necessary on the OptionList component.
 fixes #15, #16
 ```
 
-**With breaking changes**
+**With breaking change**
 
 ```
 refactor: change storybook webpack config
