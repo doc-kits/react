@@ -2,6 +2,60 @@
 
 We welcome feature requests, questions, bug reports, and of course, pull requests. Before contributing please read our guidelines below.
 
+**Table Of Contents**
+
+1. [Getting Started](#getting-started)
+2. [Development Setup](#development-setup)
+3. [Pull Requests](#pull-requests)
+4. [Commit Messages](#commit-messages)
+5. [License](#license)
+
+## Getting Started
+
+1. [Fork](https://help.github.com/articles/fork-a-repo/) the [shockits/doc-ui](https://github.com/shockits/doc-ui) repository.
+
+2. [Clone](https://help.github.com/articles/cloning-a-repository/) thre repository you've just forked to your local machine.
+
+`git clone https://github.com/{YOUR_GITHUB_USERNAME}/doc-ui`
+
+**Notes**:
+
+- The Doc UI library is built using [TypeScript](https://www.typescriptlang.org/)
+- We utilize [Storybook](https://storybook.js.org/) in development to visually see our components rendered in isolation. The storybook is then put on Github Pages when the repository is published for all to view.
+- We follow [conventional commits](https://www.conventionalcommits.org/en/v1.0.0-beta.2/) to ensure a clean working history. Please see the notes below on ["Commit Messages"](#commit-messages).
+
+## Development Setup
+
+Please ensure you are running a compatible Node version. The Doc UI Node version can be seen in the [package.json](package.json) of this repository under the `engines` key.
+
+You have access to several `scripts` to make your development experience better:
+
+- `yarn storybook`
+- `yarn ts:watch`
+- `yarn test:watch`
+
+You can view all available scripts in the [package.json](package.json) under the `scripts` key.
+
+All components are located within the `src` directory.
+
+## Pull Requests
+
+Pull requests are encouraged to help expand the library of Doc UI. Depending on the size of the change or proposal, **it may be best** to open an [issue](https://github.com/shockits/doc-ui/issues) first to discuss it with the library maintainers.
+
+### Branches
+
+- All pull requests **must** be submitted against the `dev` branch.
+
+- The **master branch** is a snapshot of the latest stable release. You should never submit a PR against this branch.
+
+- All work should be done in a dedicated branch off of the `dev` branch.
+
+- It is OK for your branch to have multiple, small commits. We will let Github take care of squashing those commits into one.
+
+### New Features
+
+- Please ensure that you have updated the appropriate Storybook file, any documentation, and relevant examples.
+
 ## Commit Messages
 
 We follow very strict rules when formatting our commit messages. This leads to more readable messages that make following the project history easier. This is **especially important** because we use the commit messages to automatically generate our `CHANGELOG.md`.
@@ -132,3 +186,7 @@ config.module.rules.push({
   loader: require.resolve('awesome-typescript-loader'),
 });
 ```
+
+## License
+
+By contributing your code to the [shockits/doc-ui](https://github.com/shockits/doc-ui) GitHub repository, you agree to license your contribution under the MIT license.
