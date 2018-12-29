@@ -14,7 +14,7 @@ In one of your Docz `.mdx` files simply import the Doc UI component in the same 
 
 `import { OptionList } from '@shockits/doc-ui';`
 
-That is it! You can run the `docs:dev` command from Docz to see your newly integrated component live. You can see a simple integration example [here](FILL-ME-IN).
+That is it! You can run the `docs:dev` command from Docz to see your newly integrated component live. You can see a simple integration example [here](https://github.com/shockits/doc-ui/tree/master/examples/docz).
 
 ## Styleguidist
 

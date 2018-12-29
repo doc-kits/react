@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/shockits/doc-ui/dev/images/logo.png?raw=true" width="500">
+  <img src="https://raw.githubusercontent.com/shockits/doc-ui/master/images/logo.png?raw=true" width="500">
 </p>
 
 <p align="center">
