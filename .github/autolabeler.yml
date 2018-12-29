@@ -3,13 +3,12 @@
 components: ['/src']
 documentation: ['*.md']
 example: ['/examples']
-tooling:
-  [
-    '.babelrc',
-    'jest.config.js'
-    '*.json',
-    '*.yml',
-    '.github',
-    '.ci',
-    '.storybook',
-  ]
+tooling: [
+  '.babelrc',
+  'jest.config.js',
+  '*.json',
+  '*.yml',
+  '.github',
+  '.ci',
+  '.storybook',
+]
