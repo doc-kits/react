@@ -1,10 +1,9 @@
 import styled from '@emotion/styled';
-import * as merge from 'deepmerge';
 import * as React from 'react';
 import { ThemeProvider } from 'emotion-theming';
-import { mq } from '../toolkit/responsive';
-import settings from '../toolkit/settings';
-import styles from './styles';
+import constructTheme from '../toolkit/constructTheme';
+import defaultStyles from './styles';
+import { AppTheme } from '../../typings/theme';
 
 interface Definition {
   key: string;
@@ -18,7 +17,8 @@ interface Definition {
 interface Props {
   tableTitle?: string;
   definitions: Definition[];
-  localStyles?: any;
+  readonly withStyles?: object;
+  localStyles?: object;
 }
 
 interface RequiredProps {
@@ -118,15 +118,21 @@ const Code = styled('code')`
   ${p => p.theme.mq(p.theme.code)};
 `;
 
-const OptionList = ({ tableTitle, definitions, localStyles }: Props) => {
+const OptionList = ({
+  tableTitle,
+  definitions,
+  withStyles,
+  localStyles,
+}: Props) => {
   const sortedDefinitions = definitions.sort(
     (a: any, b: any) => b.required - a.required
   );
-  const componentStyles = (appTheme: object = {}) =>
-    merge.all([settings, styles, { mq }, appTheme, localStyles]);
+
+  const componentTheme = (appTheme: AppTheme) =>
+    constructTheme(appTheme, defaultStyles, withStyles, localStyles);
 
   return (
-    <ThemeProvider theme={componentStyles}>
+    <ThemeProvider theme={componentTheme}>
       <Wrapper>
         <Title>{tableTitle}</Title>
 
@@ -169,7 +175,6 @@ const OptionList = ({ tableTitle, definitions, localStyles }: Props) => {
 
 OptionList.defaultProps = {
   tableTitle: 'Options',
-  localStyles: {},
   definitions: {
     required: false,
   },

@@ -21,7 +21,7 @@ const styles = {
   key: {
     color: '#334049',
     fontSize: 'inherit',
-    fontWeight: '500',
+    fontWeight: '600',
   },
   optional: {
     color: '#939da3',
