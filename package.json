@@ -4,7 +4,7 @@
   "description": "A collection of React UI components to enhance your documentation.",
   "license": "MIT",
   "main": "lib/index.js",
-  "typings": "lib/typings.d.ts",
+  "types": "lib/index.d.ts",
   "homepage": "https://github.com/shockits/doc-ui#readme",
   "repository": {
     "type": "git",
