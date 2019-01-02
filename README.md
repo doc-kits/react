@@ -34,7 +34,7 @@ Each component can be imported by name like shown above. See the demo section be
 **Usage Documentation**
 
 - [Theme Options](docs/theme-options.md)
-- [Overriding Styles](docs/overriding-styles.md)
+- [Overriding & Extending Styles](docs/override-extend-styles.md)
 - [Emotion & Facepaint](docs/emotion-facepaint.md)
 - [Fonts](docs/fonts.md)
 - [Integration with Documentation Engines](docs/integration-with-engines.md)
