@@ -6,5 +6,8 @@
     "interface-name": [true, "never-prefix"],
     "object-literal-sort-keys": false,
     "ordered-imports": false
+  },
+  "linterOptions": {
+    "exclude": ["**/__tests__/**"]
   }
 }
