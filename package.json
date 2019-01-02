@@ -133,7 +133,7 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "tslint --fix",
+      "yarn lint --fix",
       "yarn prettier:fix",
       "git add"
     ]
