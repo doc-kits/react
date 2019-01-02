@@ -11,7 +11,7 @@ describe('withStyles', () => {
     }
 
     class NewComponent extends Component<Props> {
-      render() {
+      public render() {
         return this.props.withStyles.color;
       }
     }
@@ -38,7 +38,7 @@ describe('withStyles', () => {
 
   it('should forward ref from original component onto WrappedComponent', () => {
     class NewComponent extends Component {
-      render() {
+      public render() {
         return <div>Test</div>;
       }
     }
