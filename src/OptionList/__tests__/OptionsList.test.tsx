@@ -1,13 +1,18 @@
-import * as React from 'react';
-import * as renderer from 'react-test-renderer';
-import OptionList from './OptionList';
+import React from 'react';
+import renderer from 'react-test-renderer';
+import OptionList from '../OptionList';
 
-jest.mock('../toolkit/responsive', () => ({
-  mq: () => {} /* tslint:disable-line no-empty */,
-}));
+jest.mock('../../toolkit/constructTheme', () => {
+  return () => ({
+    colors: {},
+    required: {},
+    optional: {},
+    mq: () => undefined,
+  });
+});
 
 describe('<OptionList />', () => {
-  it('should render with min requirements', () => {
+  it('should render with minimum requirements', () => {
     const tree = renderer
       .create(
         <OptionList

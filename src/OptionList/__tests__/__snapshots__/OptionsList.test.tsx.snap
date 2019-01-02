@@ -2,7 +2,7 @@
 
 exports[`<OptionList /> should render with all available passed in options 1`] = `
 <div
-  className="css-qwwh84"
+  className="css-1byi7qz"
 >
   <div
     className="css-7zhfhb"
@@ -21,7 +21,7 @@ exports[`<OptionList /> should render with all available passed in options 1`] =
         align-content
       </div>
       <div
-        className="css-1pzfe1o"
+        className="css-ynica6"
         required={true}
       >
         required
@@ -88,9 +88,9 @@ exports[`<OptionList /> should render with all available passed in options 1`] =
 </div>
 `;
 
-exports[`<OptionList /> should render with min requirements 1`] = `
+exports[`<OptionList /> should render with minimum requirements 1`] = `
 <div
-  className="css-qwwh84"
+  className="css-1byi7qz"
 >
   <div
     className="css-7zhfhb"
@@ -109,7 +109,7 @@ exports[`<OptionList /> should render with min requirements 1`] = `
         align-content
       </div>
       <div
-        className="css-ml94ed"
+        className="css-shasf9"
       >
         optional
       </div>

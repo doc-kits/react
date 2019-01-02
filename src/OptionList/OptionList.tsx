@@ -1,9 +1,8 @@
 import styled from '@emotion/styled';
-import * as React from 'react';
+import React from 'react';
 import { ThemeProvider } from 'emotion-theming';
 import constructTheme from '../toolkit/constructTheme';
 import defaultStyles from './styles';
-import { AppTheme } from '../../typings/theme';
 
 interface Definition {
   key: string;
@@ -128,8 +127,8 @@ const OptionList = ({
     (a: any, b: any) => b.required - a.required
   );
 
-  const componentTheme = (appTheme: AppTheme) =>
-    constructTheme(appTheme, defaultStyles, withStyles, localStyles);
+  const componentTheme = () =>
+    constructTheme(defaultStyles, withStyles, localStyles);
 
   return (
     <ThemeProvider theme={componentTheme}>
