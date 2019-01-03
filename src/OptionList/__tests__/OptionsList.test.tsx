@@ -34,7 +34,7 @@ describe('<OptionList />', () => {
       .create(
         <OptionList
           tableTitle="Arguments"
-          localStyles={{ title: { color: 'green' } }}
+          styles={{ title: { color: 'green' } }}
           definitions={[
             {
               key: 'align-content',

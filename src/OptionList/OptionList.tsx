@@ -17,7 +17,7 @@ interface Props {
   tableTitle?: string;
   definitions: Definition[];
   readonly withStyles?: object;
-  localStyles?: object;
+  styles?: object;
 }
 
 interface RequiredProps {
@@ -117,18 +117,13 @@ const Code = styled('code')`
   ${p => p.theme.mq(p.theme.code)};
 `;
 
-const OptionList = ({
-  tableTitle,
-  definitions,
-  withStyles,
-  localStyles,
-}: Props) => {
+const OptionList = ({ tableTitle, definitions, withStyles, styles }: Props) => {
   const sortedDefinitions = definitions.sort(
     (a: any, b: any) => b.required - a.required
   );
 
   const componentTheme = () =>
-    constructTheme(defaultStyles, withStyles, localStyles);
+    constructTheme(defaultStyles, withStyles, styles);
 
   return (
     <ThemeProvider theme={componentTheme}>

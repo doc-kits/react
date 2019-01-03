@@ -3,7 +3,7 @@
 There are 2 options to inject styles into Doc UI components:
 
 1. Locally via the `withStyles` HOC
-2. Per instance via the `localStyles` prop
+2. Per instance via the `styles` prop
 
 All of the Doc UI default styles can be found [here](https://github.com/shockits/doc-ui/blob/master/src/toolkit/theme.ts).
 
@@ -36,11 +36,11 @@ The idea with this strategy would be to create a local component within your app
 
 You would then use this new component throughout your application, which now has your owns styles, instead of using the Doc UI component directly.
 
-## localStyles
+## styles
 
-A `localStyles` prop has been made available for those times when you just need to inject your own styles into a single instance of a Doc UI component.
+A `styles` prop has been made available for those times when you just need to inject your own styles into a single instance of a Doc UI component.
 
-The style values from the `localStyles` prop will be merged with the default component styles.
+The style values from the `styles` prop will be merged with the default component styles.
 
 This strategy of overriding takes the highest priority.
 
@@ -49,7 +49,7 @@ import { OptionList } from '@shockits/doc-ui';
 
 <OptionList
   tableTitle="Arguments"
-  localStyles={{
+  styles={{
     type: {
       color: '#ff00cc',
     },
