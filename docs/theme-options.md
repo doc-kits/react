@@ -32,7 +32,7 @@ const MyOptionList = withStyles({
 export default MyOptionList;
 ```
 
-## Using localStyles
+## Using styles
 
 ```js
 import { facepaint, OptionList } from '@shockits/doc-ui';
@@ -41,7 +41,7 @@ const mq = facepaint([`@media(min-width: 768px)`, `@media(min-width: 1440px)`]);
 
 <OptionList
   tableTitle="Arguments"
-  localStyles={{
+  styles={{
     colors: { link: 'blue' },
     mq,
     type: {

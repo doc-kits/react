@@ -13,7 +13,7 @@ describe('constructTheme', () => {
     expect(theme).toHaveProperty('mq');
   });
 
-  it('should ensure withStyles wins without localStyles', () => {
+  it('should ensure withStyles wins without styles', () => {
     const withStyles = {
       colors: { link: 'red' },
       mq: () => 'mq',
@@ -25,20 +25,20 @@ describe('constructTheme', () => {
     expect(theme).toEqual(withStyles);
   });
 
-  it('should ensure localStyles always wins', () => {
+  it('should ensure styles always wins', () => {
     const withStyles = {
       colors: { link: 'red' },
       mq: () => 'mq',
       title: { color: 'purple' },
     };
-    const localStyles = {
+    const styles = {
       colors: { link: 'green' },
       mq: () => 'bp',
       title: { color: 'blue' },
     };
 
-    theme = constructTheme(defaultTheme, withStyles, localStyles);
+    theme = constructTheme(defaultTheme, withStyles, styles);
 
-    expect(theme).toEqual(localStyles);
+    expect(theme).toEqual(styles);
   });
 });
