@@ -95,7 +95,7 @@
     "react-dom": "16.7.0",
     "react-test-renderer": "16.7.0",
     "semantic-release": "15.13.3",
-    "storybook-readme": "4.0.2",
+    "storybook-readme": "4.0.5",
     "stylelint": "9.9.0",
     "stylelint-config-recommended": "2.1.0",
     "stylelint-config-styled-components": "0.1.1",
