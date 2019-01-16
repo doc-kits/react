@@ -1,4 +1,4 @@
-import defaultTheme from '../../toolkit/theme';
+import defaultTheme from '../theme';
 import constructTheme from '../constructTheme';
 
 describe('constructTheme', () => {
@@ -22,7 +22,7 @@ describe('constructTheme', () => {
 
     theme = constructTheme(defaultTheme, withStyles);
 
-    expect(theme).toEqual(withStyles);
+    expect(theme).toMatchObject(withStyles);
   });
 
   it('should ensure styles always wins', () => {
@@ -39,6 +39,6 @@ describe('constructTheme', () => {
 
     theme = constructTheme(defaultTheme, withStyles, styles);
 
-    expect(theme).toEqual(styles);
+    expect(theme).toMatchObject(styles);
   });
 });

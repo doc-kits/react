@@ -10,7 +10,7 @@ exports[`<OptionList /> should render with all available passed in options 1`] =
     Arguments
   </div>
   <div
-    className="css-1uxy4lo"
+    className="css-7zhfhb"
   >
     <div
       className="css-m1kwjs"
@@ -58,7 +58,7 @@ exports[`<OptionList /> should render with all available passed in options 1`] =
          Possible values are 
       </span>
       <span
-        className="css-idza5k"
+        className="css-1fxhzsy"
       >
         <span>
           <code
@@ -98,7 +98,7 @@ exports[`<OptionList /> should render with minimum requirements 1`] = `
     Options
   </div>
   <div
-    className="css-1uxy4lo"
+    className="css-7zhfhb"
   >
     <div
       className="css-m1kwjs"
