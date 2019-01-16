@@ -83,7 +83,7 @@
     "@types/storybook__react": "4.0.0",
     "awesome-typescript-loader": "5.2.1",
     "babel-loader": "8.0.5",
-    "babel-plugin-emotion": "10.0.5",
+    "babel-plugin-emotion": "10.0.6",
     "enzyme": "3.7.0",
     "enzyme-adapter-react-16": "1.6.0",
     "gh-pages": "2.0.1",
@@ -108,10 +108,10 @@
     "webpack": "4.28.3"
   },
   "dependencies": {
-    "@emotion/core": "10.0.5",
-    "@emotion/styled": "10.0.5",
+    "@emotion/core": "10.0.6",
+    "@emotion/styled": "10.0.6",
     "deepmerge": "3.0.0",
-    "emotion-theming": "10.0.5",
+    "emotion-theming": "10.0.6",
     "facepaint": "1.2.1",
     "hoist-non-react-statics": "3.2.1",
     "polished": "2.3.1"
