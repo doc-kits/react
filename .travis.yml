@@ -14,7 +14,7 @@ jobs:
     - stage: lint
       script: commitlint-travis && yarn tsc && yarn lint
     - stage: test
-      script: yarn test
+      script: yarn test:coverage
     - stage: release
       if: (NOT type IN (pull_request)) AND (branch = master)
       script: skip
