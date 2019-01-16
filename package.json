@@ -114,7 +114,7 @@
     "emotion-theming": "10.0.6",
     "facepaint": "1.2.1",
     "hoist-non-react-statics": "3.2.1",
-    "polished": "2.3.1"
+    "polished": "2.3.3"
   },
   "peerDependencies": {
     "react": ">=16.0.0",
