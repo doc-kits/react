@@ -31,7 +31,7 @@ const Wrapper = styled.div`
   ${p => p.theme.mq(p.theme.wrapper)};
 
   a {
-    color: ${p => p.theme.colors.link};
+    color: ${p => p.theme.ui.link.color};
     text-decoration: none;
 
     &:hover {
@@ -40,7 +40,7 @@ const Wrapper = styled.div`
 
     &:active,
     &:visited {
-      color: ${p => p.theme.colors.link};
+      color: ${p => p.theme.ui.link.color};
     }
   }
 `;
@@ -51,10 +51,6 @@ const Title = styled.div`
 
 const Option = styled.div`
   ${p => p.theme.mq(p.theme.option)};
-
-  &:first-of-type {
-    border-top: none;
-  }
 `;
 
 const Info = styled.div`
@@ -106,6 +102,7 @@ const Values = styled.span`
 
   span:last-child:not(:only-of-type)::before {
     content: ' or ';
+    color: ${p => p.theme.ui.text.color};
   }
 
   div:nth-of-type(1) {

@@ -1,21 +1,24 @@
 import { darken } from 'polished';
+import { colors, ui } from '../toolkit/theme';
+
+const codeBg = '#fafcfc';
 
 const styles = {
   wrapper: {
-    borderBottom: '1px solid #cbd8de',
-    color: '#4a6271',
+    borderBottom: `1px solid ${colors.grayScale['200']}`,
+    color: ui.text.color,
     fontSize: ['0.875rem', '1rem'],
     lineHeight: '1.5',
   },
   title: {
-    color: '#4a6271',
+    color: ui.text.color,
     fontSize: 'inherit',
-    borderBottom: '1px solid #cbd8de',
+    borderBottom: `1px solid ${colors.grayScale['200']}`,
     paddingBottom: '0.313em',
     textTransform: 'uppercase',
   },
   option: {
-    borderTop: '1px solid #edf3f3',
+    borderTop: `1px solid ${colors.grayScale['100']}`,
     padding: '1.143em 0',
   },
   key: {
@@ -24,19 +27,19 @@ const styles = {
     fontWeight: '600',
   },
   optional: {
-    color: '#939da3',
+    color: colors.grayScale['300'],
     fontSize: '1em',
   },
   required: {
-    color: '#ffae54',
+    color: colors.primary.orange,
     fontSize: '0.857em',
-    border: '1px solid #ffae54',
+    border: `1px solid ${colors.primary.orange}`,
     borderRadius: '10px',
     padding: '0 0.571em',
     textTransform: 'uppercase',
   },
   type: {
-    color: '#939da3',
+    color: colors.grayScale['300'],
     fontSize: 'inherit',
   },
   description: {
@@ -45,13 +48,13 @@ const styles = {
     margin: '1em 0 0 0',
   },
   values: {
-    color: '#939da3',
+    color: colors.grayScale['300'],
   },
   code: {
-    backgroundColor: '#fafcfc',
+    backgroundColor: codeBg,
     borderRadius: '3px',
-    border: `1px solid ${darken(0.05, '#fafcfc')}`,
-    color: '#b93d6a',
+    border: `1px solid ${darken(0.05, codeBg)}`,
+    color: colors.primary.red,
     padding: '0 0.4em',
     fontFamily: 'inherit',
   },

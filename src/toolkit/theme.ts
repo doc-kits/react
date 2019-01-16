@@ -1,15 +1,33 @@
 import facepaint from 'facepaint';
 
-export const colors = {
-  link: '#0099e5',
-};
-
 export const mq = facepaint([
   `@media(min-width: 768px)`,
   `@media(min-width: 1440px)`,
 ]);
 
+export const colors = {
+  primary: {
+    blue: '#0099e5',
+    green: '#45d29a',
+    yellow: '#f4ca3d',
+    orange: '#eb742c',
+    red: '#d73347',
+    gray: '#4a6271',
+  },
+  grayScale: {
+    100: '#f0f0f0',
+    200: '#d8d8d8',
+    300: '#989898',
+  },
+};
+
+export const ui = {
+  text: { color: colors.primary.gray },
+  link: { color: colors.primary.blue },
+};
+
 export default {
-  colors,
   mq,
+  colors,
+  ui,
 };
