@@ -78,7 +78,7 @@
     "@types/react-test-renderer": "16.0.3",
     "@types/storybook-readme": "4.0.0",
     "@types/storybook__addon-actions": "3.4.1",
-    "@types/storybook__addon-knobs": "3.4.1",
+    "@types/storybook__addon-knobs": "4.0.0",
     "@types/storybook__addon-options": "3.2.3",
     "@types/storybook__react": "4.0.0",
     "awesome-typescript-loader": "5.2.1",
