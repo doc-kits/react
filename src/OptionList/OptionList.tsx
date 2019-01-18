@@ -14,7 +14,7 @@ interface Definition {
 }
 
 interface Props {
-  tableTitle?: string;
+  tableTitle: string;
   definitions: Definition[];
   readonly withStyles?: object;
   styles?: object;
@@ -115,10 +115,6 @@ const Code = styled('code')`
 `;
 
 const OptionList = ({ tableTitle, definitions, withStyles, styles }: Props) => {
-  const sortedDefinitions = definitions.sort(
-    (a: any, b: any) => b.required - a.required
-  );
-
   const componentTheme = () =>
     constructTheme(defaultStyles, withStyles, styles);
 
@@ -127,7 +123,7 @@ const OptionList = ({ tableTitle, definitions, withStyles, styles }: Props) => {
       <Wrapper>
         <Title>{tableTitle}</Title>
 
-        {sortedDefinitions.map(argument => {
+        {definitions.map(argument => {
           const requiredText = argument.required ? 'required' : 'optional';
 
           return (
