@@ -8,3 +8,4 @@ lib
 coverage
 yarn-debug.log*
 yarn-error.log*
+notes.md
