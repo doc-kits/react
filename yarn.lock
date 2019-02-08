@@ -1692,9 +1692,9 @@
     "@types/cheerio" "*"
     "@types/react" "*"
 
-"@types/enzyme@3.1.14":
-  version "3.1.14"
-  resolved "https://registry.yarnpkg.com/@types/enzyme/-/enzyme-3.1.14.tgz#379c26205f6e0e272f3a51d6bbdd50071a9d03a6"
+"@types/enzyme@3.1.17":
+  version "3.1.17"
+  resolved "https://registry.yarnpkg.com/@types/enzyme/-/enzyme-3.1.17.tgz#41f553bfdbaa00880488feabb3ade47d5489db42"
   dependencies:
     "@types/cheerio" "*"
     "@types/react" "*"
@@ -4397,9 +4397,9 @@ enzyme-adapter-utils@^1.10.0:
     prop-types "^15.6.2"
     semver "^5.6.0"
 
-enzyme@3.7.0:
-  version "3.7.0"
-  resolved "https://registry.yarnpkg.com/enzyme/-/enzyme-3.7.0.tgz#9b499e8ca155df44fef64d9f1558961ba1385a46"
+enzyme@3.8.0:
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/enzyme/-/enzyme-3.8.0.tgz#646d2d5d0798cb98fdec39afcee8a53237b47ad5"
   dependencies:
     array.prototype.flat "^1.2.1"
     cheerio "^1.0.0-rc.2"
@@ -5558,11 +5558,11 @@ hoist-non-react-statics@1.x.x, hoist-non-react-statics@^1.2.0:
   version "1.2.0"
   resolved "http://registry.npmjs.org/hoist-non-react-statics/-/hoist-non-react-statics-1.2.0.tgz#aa448cf0986d55cc40773b17174b7dd066cb7cfb"
 
-hoist-non-react-statics@3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.2.1.tgz#c09c0555c84b38a7ede6912b61efddafd6e75e1e"
+hoist-non-react-statics@3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.3.0.tgz#b09178f0122184fb95acf525daaecb4d8f45958b"
   dependencies:
-    react-is "^16.3.2"
+    react-is "^16.7.0"
 
 hoist-non-react-statics@^2.3.1:
   version "2.5.5"
@@ -9376,7 +9376,7 @@ react-inspector@^2.3.0:
     is-dom "^1.0.9"
     prop-types "^15.6.1"
 
-react-is@^16.3.2, react-is@^16.7.0:
+react-is@^16.7.0:
   version "16.7.0"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.7.0.tgz#c1bd21c64f1f1364c6f70695ec02d69392f41bfa"
 
