@@ -110,7 +110,7 @@
   "dependencies": {
     "@emotion/core": "10.0.6",
     "@emotion/styled": "10.0.6",
-    "deepmerge": "3.0.0",
+    "deepmerge": "3.1.0",
     "emotion-theming": "10.0.6",
     "facepaint": "1.2.1",
     "hoist-non-react-statics": "3.2.1",
