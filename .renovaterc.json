@@ -4,7 +4,7 @@
     "schedule:earlyMondays",
     ":semanticCommitTypeAll(ci)",
     ":semanticCommitScopeDisabled",
-    ":pinAllExceptPeerDependencies"
+    ":pinOnlyDevDependencies"
   ],
   "rangeStrategy": "pin",
   "baseBranches": ["dev"],
