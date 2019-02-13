@@ -6,7 +6,7 @@ import { withOptions } from '@storybook/addon-options';
 
 // inject custom css to all stories
 addDecorator(story => (
-  <div style={{ fontFamily: '"Source Sans Pro", sans-serif' }}>{story()}</div>
+  <div style={{ fontFamily: '"Muli", sans-serif' }}>{story()}</div>
 ));
 
 // setup global addons
