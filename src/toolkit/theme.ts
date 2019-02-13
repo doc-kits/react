@@ -1,8 +1,8 @@
 import facepaint from 'facepaint';
 
 export const mq = facepaint([
-  `@media(min-width: 768px)`,
-  `@media(min-width: 1440px)`,
+  `@media(min-width: 600px)`,
+  `@media(min-width: 1280px)`,
 ]);
 
 export const colors = {
@@ -17,7 +17,8 @@ export const colors = {
   grayScale: {
     100: '#f0f0f0',
     200: '#d8d8d8',
-    300: '#989898',
+    300: '#a8a8a8',
+    400: '#989898',
   },
 };
 
