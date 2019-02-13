@@ -103,6 +103,7 @@ The `<scope>` is the name of the component or area of the codebase that was affe
 
 - **toolkit**
 - **options-list**
+- **color-box**
 
 ### Subject
 

@@ -114,7 +114,8 @@
     "emotion-theming": "10.0.6",
     "facepaint": "1.2.1",
     "hoist-non-react-statics": "3.3.0",
-    "polished": "2.3.3"
+    "polished": "2.3.3",
+    "react-icons": "^3.3.0"
   },
   "peerDependencies": {
     "react": ">=16.0.0",
@@ -134,10 +135,13 @@
     }
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
-      "yarn lint --fix",
-      "yarn prettier:fix",
-      "git add"
-    ]
+    "concurrent": true,
+    "linters": {
+      "*.{ts,tsx}": [
+        "yarn lint --fix",
+        "yarn prettier:fix",
+        "git add"
+      ]
+    }
   }
 }

@@ -1,6 +1,11 @@
 # Option List
 
-Useful to render options, parameters, or arguments in a stylish table-like structure.
+Useful to render options, parameters, or arguments in a stylish list structure.
+
+## Features
+
+- Automatically builds the sentence format for the option based on the props passed into the component.
+- Accepts pattern to allow HTML such as links to be built into the description sentence.
 
 ## Usage
 
