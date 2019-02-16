@@ -6,7 +6,6 @@
     ":semanticCommitScopeDisabled",
     ":pinOnlyDevDependencies"
   ],
-  "rangeStrategy": "pin",
   "baseBranches": ["dev"],
   "separateMultipleMajor": true
 }
