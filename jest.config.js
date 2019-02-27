@@ -11,7 +11,7 @@ module.exports = {
       branches: 80,
       functions: 80,
       lines: 80,
-      statements: -10,
+      statements: 80,
     },
   },
   coveragePathIgnorePatterns: ['/node_modules/', 'src/setupEnzyme.ts'],
@@ -21,5 +21,8 @@ module.exports = {
   testMatch: ['**/__tests__/**/*.ts?(x)', '**/?(*.)+(spec|test).ts?(x)'],
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
+  },
+  moduleNameMapper: {
+    '\\.(css)$': 'identity-obj-proxy',
   },
 };

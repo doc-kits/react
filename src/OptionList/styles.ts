@@ -1,24 +1,24 @@
 import { darken } from 'polished';
-import { colors, ui } from '../toolkit/theme';
+import { palette, ui } from '../toolkit/theme';
 
 const codeBg = '#fafcfc';
 
 const styles = {
   wrapper: {
-    borderBottom: `1px solid ${colors.grayScale['200']}`,
+    borderBottom: `1px solid ${palette.grayScale['200']}`,
     color: ui.text.color,
     fontSize: ['0.875rem', '1rem'],
     lineHeight: '1.5',
   },
   title: {
-    borderBottom: `1px solid ${colors.grayScale['200']}`,
+    borderBottom: `1px solid ${palette.grayScale['200']}`,
     color: ui.text.color,
     fontSize: 'inherit',
     paddingBottom: '0.313em',
     textTransform: 'uppercase',
   },
   option: {
-    borderTop: `1px solid ${colors.grayScale['100']}`,
+    borderTop: `1px solid ${palette.grayScale['100']}`,
     padding: '1.143em 0',
   },
   key: {
@@ -27,19 +27,18 @@ const styles = {
     fontWeight: '600',
   },
   optional: {
-    color: colors.grayScale['400'],
-    fontSize: '1rem',
+    color: palette.grayScale['400'],
   },
   required: {
-    border: `1px solid ${colors.primary.orange}`,
+    border: `1px solid ${palette.primary.orange}`,
     borderRadius: '10px',
-    color: colors.primary.orange,
-    fontSize: '0.857rem',
+    color: palette.primary.orange,
+    fontSize: '0.875em',
     padding: '0 0.571em',
     textTransform: 'uppercase',
   },
   type: {
-    color: colors.grayScale['400'],
+    color: palette.grayScale['400'],
     fontSize: 'inherit',
   },
   description: {
@@ -48,13 +47,13 @@ const styles = {
     margin: '1em 0 0 0',
   },
   values: {
-    color: colors.grayScale['400'],
+    color: palette.grayScale['400'],
   },
   code: {
     backgroundColor: codeBg,
     border: `1px solid ${darken(0.05, codeBg)}`,
     borderRadius: '3px',
-    color: colors.primary.red,
+    color: palette.primary.red,
     fontFamily: 'inherit',
     padding: '0 0.4em',
   },

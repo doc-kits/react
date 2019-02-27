@@ -4,7 +4,7 @@ import OptionList from '../OptionList';
 
 jest.mock('../../toolkit/constructTheme', () => {
   return () => ({
-    colors: {},
+    palette: {},
     ui: { link: {}, text: {} },
     required: {},
     optional: {},
@@ -30,7 +30,7 @@ describe('<OptionList />', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('should render with all available passed in options', () => {
+  it('should render with all available passed in props', () => {
     const tree = renderer
       .create(
         <OptionList

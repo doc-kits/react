@@ -9,13 +9,13 @@ describe('constructTheme', () => {
   });
 
   it('should produce the default object given defaultTheme', () => {
-    expect(theme).toHaveProperty('colors');
+    expect(theme).toHaveProperty('palette');
     expect(theme).toHaveProperty('mq');
   });
 
   it('should ensure withStyles wins without styles', () => {
     const withStyles = {
-      colors: { link: 'red' },
+      palette: { link: 'red' },
       mq: () => 'mq',
       title: { color: 'purple' },
     };
@@ -27,12 +27,12 @@ describe('constructTheme', () => {
 
   it('should ensure styles always wins', () => {
     const withStyles = {
-      colors: { link: 'red' },
+      palette: { link: 'red' },
       mq: () => 'mq',
       title: { color: 'purple' },
     };
     const styles = {
-      colors: { link: 'green' },
+      palette: { link: 'green' },
       mq: () => 'bp',
       title: { color: 'blue' },
     };

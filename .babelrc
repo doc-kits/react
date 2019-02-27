@@ -7,7 +7,8 @@
   "plugins": [
     "emotion",
     "@babel/proposal-class-properties",
-    "@babel/proposal-object-rest-spread"
+    "@babel/proposal-object-rest-spread",
+    "syntax-dynamic-import"
   ],
   "ignore": ["src/**/*.stories.tsx", "src/**/*.test.tsx", "src/setupEnzyme.ts"]
 }
