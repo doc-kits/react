@@ -1,13 +1,13 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/shockits/doc-ui/master/images/logo.png?raw=true" width="500">
+  <img src="https://raw.githubusercontent.com/doc-kits/react/master/images/logo.png?raw=true" width="500">
 </p>
 
 <p align="center">
-  <img src="https://badgen.net/npm/v/shockits/doc-ui" alt="Version">
+  <img src="https://badgen.net/npm/v/doc-kits/react" alt="Version">
   <img src="https://badgen.net/badge/license/MIT/blue" alt="License">
-  <img src="https://badgen.net/david/dep/shockits/doc-ui" alt="Dependencies">
-  <img src="https://badgen.net/packagephobia/publish/shockits/doc-ui" alt="Package Size">
-  <img src="https://badgen.net/travis/shockits/doc-ui" alt="CI Build">
+  <img src="https://badgen.net/david/dep/doc-kits/react" alt="Dependencies">
+  <img src="https://badgen.net/packagephobia/publish/doc-kits/react" alt="Package Size">
+  <img src="https://badgen.net/travis/doc-kits/react" alt="CI Build">
 </p>
 
 ## 💅 Features
@@ -21,13 +21,13 @@
 
 Via Yarn or NPM:
 
-`yarn add @shockits/doc-ui`
+`yarn add @doc-kits/react`
 
-`npm install @shockits/doc-ui`
+`npm install @doc-kits/react`
 
 ## 📚 Usage
 
-`import { OptionList } from '@shockits/doc-ui';`
+`import { OptionList } from '@doc-kits/react';`
 
 Each component can be imported by name like shown above. See the demo section below to view the documentation for all of the available components.
 
@@ -41,7 +41,7 @@ Each component can be imported by name like shown above. See the demo section be
 
 ## 🎩 Demo
 
-[Storybook Demos & Component Documentation](https://shockits.github.io/doc-ui/)
+[Storybook Demos & Component Documentation](https://doc-kits.github.io/react/)
 
 ## 🔑 Why?
 
@@ -53,6 +53,6 @@ The React component ecosystem has given rise to full-fledged documentation engin
 
 **The problem is** there has yet to be a React component library centered around documentation that can be integrated into these engines or used for custom documentation projects.
 
-**The solution is** `doc-ui` 😊
+**The solution is** `@doc-kits/react` 😊
 
 Our goal is to create documentation-related components you didn't even know you wanted!

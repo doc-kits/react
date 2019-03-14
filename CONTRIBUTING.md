@@ -4,29 +4,39 @@ We welcome feature requests, questions, bug reports, and of course, pull request
 
 **Table Of Contents**
 
-1. [Getting Started](#getting-started)
-2. [Development Setup](#development-setup)
-3. [Pull Requests](#pull-requests)
-4. [Commit Messages](#commit-messages)
-5. [License](#license)
+- [Contributing](#contributing)
+  - [Getting Started](#getting-started)
+  - [Development Setup](#development-setup)
+  - [Pull Requests](#pull-requests)
+    - [Branches](#branches)
+    - [New Features](#new-features)
+  - [Commit Messages](#commit-messages)
+    - [Message Format](#message-format)
+    - [Type](#type)
+    - [Scope](#scope)
+    - [Subject](#subject)
+    - [Body](#body)
+    - [Footer](#footer)
+    - [Examples](#examples)
+  - [License](#license)
 
 ## Getting Started
 
-1. [Fork](https://help.github.com/articles/fork-a-repo/) the [shockits/doc-ui](https://github.com/shockits/doc-ui) repository.
+1. [Fork](https://help.github.com/articles/fork-a-repo/) the [doc-kits/react](https://github.com/doc-kits/react) repository.
 
 2. [Clone](https://help.github.com/articles/cloning-a-repository/) thre repository you've just forked to your local machine.
 
-`git clone https://github.com/{YOUR_GITHUB_USERNAME}/doc-ui`
+`git clone https://github.com/{YOUR_GITHUB_USERNAME}/react`
 
 **Notes**:
 
-- The Doc UI library is built using [TypeScript](https://www.typescriptlang.org/)
+- The Doc Kits: React library is built using [TypeScript](https://www.typescriptlang.org/)
 - We utilize [Storybook](https://storybook.js.org/) in development to visually see our components rendered in isolation. The storybook is then put on Github Pages when the repository is published for all to view.
 - We follow [conventional commits](https://www.conventionalcommits.org/en/v1.0.0-beta.2/) to ensure a clean working history. Please see the notes below on ["Commit Messages"](#commit-messages).
 
 ## Development Setup
 
-Please ensure you are running a compatible Node version. The Doc UI Node version can be seen in the [package.json](package.json) of this repository under the `engines` key.
+Please ensure you are running a compatible Node version. The Doc Kits: React Node version can be seen in the [package.json](package.json) of this repository under the `engines` key.
 
 You have access to several `scripts` to make your development experience better:
 
@@ -40,7 +50,7 @@ All components are located within the `src` directory.
 
 ## Pull Requests
 
-Pull requests are encouraged to help expand the library of Doc UI. Depending on the size of the change or proposal, **it may be best** to open an [issue](https://github.com/shockits/doc-ui/issues) first to discuss it with the library maintainers.
+Pull requests are encouraged to help expand the library of Doc Kits: React. Depending on the size of the change or proposal, **it may be best** to open an [issue](https://github.com/doc-kits/react/issues) first to discuss it with the library maintainers.
 
 ### Branches
 
@@ -191,4 +201,4 @@ config.module.rules.push({
 
 ## License
 
-By contributing your code to the [shockits/doc-ui](https://github.com/shockits/doc-ui) GitHub repository, you agree to license your contribution under the MIT license.
+By contributing your code to the [doc-kits/react](https://github.com/doc-kits/react) GitHub repository, you agree to license your contribution under the MIT license.

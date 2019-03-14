@@ -1,28 +1,28 @@
 {
-  "name": "@shockits/doc-ui",
+  "name": "@doc-kits/react",
   "version": "1.2.0",
-  "description": "A collection of React UI components to enhance your documentation.",
+  "description": "A collection of React UI components to enhance your documentation",
   "license": "MIT",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "homepage": "https://github.com/shockits/doc-ui#readme",
+  "homepage": "https://github.com/doc-kits/react#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/shockits/doc-ui.git"
+    "url": "https://github.com/doc-kits/react.git"
   },
   "bugs": {
-    "url": "https://github.com/shockits/doc-ui/issues"
+    "url": "https://github.com/doc-kits/react/issues"
   },
   "author": {
     "name": "Michael Donahue",
     "email": "mtdonahue1@gmail.com",
-    "url": "https://github.com/shockits/doc-ui"
+    "url": "https://github.com/doc-kits/react"
   },
   "keywords": [
     "docs",
     "documentation",
-    "react-components",
     "react",
+    "react-components",
     "doc-kits",
     "design-system",
     "typescript",

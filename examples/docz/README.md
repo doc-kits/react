@@ -1,6 +1,6 @@
 # Docz Integration
 
-This examples shows how you might integrate a [Doc UI](https://github.com/shockits/doc-ui) component with [Docz](https://www.docz.site/).
+This examples shows how you might integrate a [Doc Kits: React](https://github.com/doc-kits/react) component with [Docz](https://www.docz.site/).
 
 ## Usage
 
@@ -16,8 +16,8 @@ You will be able to see the component rendered locally by visiting `http://127.0
 
 ## Notes
 
-This examples shows two specific variations of importing a Doc UI component into Docz.
+This examples shows two specific variations of importing a Doc Kits: React component into Docz.
 
-1. Importing the component directly from `@shockits/doc-ui` without any modifications.
+1. Importing the component directly from `@doc-kits/react` without any modifications.
 
-2. Importing a local wrapper component which injects your own styles via the Doc UI `withStyles` higher-order component. The wrapper component extends and overrides the default styles from the Doc UI component.
+2. Importing a local wrapper component which injects your own styles via the Doc Kits: React `withStyles` higher-order component. The wrapper component extends and overrides the default styles from the Doc Kits: React component.

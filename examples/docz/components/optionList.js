@@ -1,4 +1,4 @@
-import { withStyles, OptionList } from '@shockits/doc-ui';
+import { withStyles, OptionList } from '@doc-kits/react';
 
 export default withStyles({
   // Overriding 'wrapper' and 'title' styles

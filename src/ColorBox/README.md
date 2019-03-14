@@ -10,7 +10,7 @@ Useful to render a gallery of available colors belonging to a palette or scheme.
 
 **Import**:
 
-`import { ColorBox } from '@shockits/doc-ui';`
+`import { ColorBox } from '@doc-kits/react';`
 
 **JSX**:
 

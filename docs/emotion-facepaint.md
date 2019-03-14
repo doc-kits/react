@@ -1,6 +1,6 @@
 # Emotion & Facepaint
 
-Doc UI uses both Emotion and Facepaint under the hood to provide a dynamic API for developers to override the component styles.
+Doc Kits: React uses both Emotion and Facepaint under the hood to provide a dynamic API for developers to override the component styles.
 
 ## Emotion
 
@@ -8,23 +8,23 @@ Doc UI uses both Emotion and Facepaint under the hood to provide a dynamic API f
 
 ## Facepaint
 
-In conjuction with Emotion, [Facepaint](https://github.com/emotion-js/facepaint), part of the Emotion family, adds even more value be providing a smooth API whereby developers are able to first create a set of media queries to be used by the Doc UI components and then pass values for each media query to an Array which is set on a CSS Property.
+In conjuction with Emotion, [Facepaint](https://github.com/emotion-js/facepaint), part of the Emotion family, adds even more value be providing a smooth API whereby developers are able to first create a set of media queries to be used by the Doc Kits: React components and then pass values for each media query to an Array which is set on a CSS Property.
 
 ### Creating Facepaint Media Queries
 
 In the [theme options](#theme-options) section above, you will notice in each example that a custom set of media queries are being passed in the `mq` key, created by the `facepaint` function. Again, that looks like this:
 
 ```js
-import { facepaint } from '@shockits/doc-ui';
+import { facepaint } from '@doc-kits/react';
 
 const mq = facepaint([`@media(min-width: 768px)`, `@media(min-width: 1440px)`]);
 ```
 
-By passing in your own media queries to the `mq` key, you've overwritten the [defaults](https://github.com/shockits/doc-ui/blob/master/src/toolkit/theme.ts) provided by Doc UI.
+By passing in your own media queries to the `mq` key, you've overwritten the [defaults](https://github.com/doc-kits/react/blob/master/src/toolkit/theme.ts) provided by Doc Kits: React.
 
 ### Setting Values
 
-Whether you are using your own media queries or using the Doc UI default media queries, you have the ability to pass an array of values for a _any_ component property to create a different style for that property at the set media query breakpoints.
+Whether you are using your own media queries or using the Doc Kits: React default media queries, you have the ability to pass an array of values for a _any_ component property to create a different style for that property at the set media query breakpoints.
 
 ```js
 /* Breakpoints: 768px, 1440px */
@@ -38,6 +38,6 @@ const styles = {
 };
 ```
 
-Index 0 in the array is your **"mobile first"** value. The values that follow in the array in this example correspond to the default Doc UI breakpoints, 768px and 1440px respectively.
+Index 0 in the array is your **"mobile first"** value. The values that follow in the array in this example correspond to the default Doc Kits: React breakpoints, 768px and 1440px respectively.
 
 If you had passed your own media queries, the following N-number of values in the array would correspond to each of the breakpoints you've defined.
