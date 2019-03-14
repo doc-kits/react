@@ -23,7 +23,7 @@ This is an issue with:
 
 Additional details:
 
-- Doc UI version: {_insert here_}
+- Doc Kits: React version: {_insert here_}
 - React version: {_insert here_}
 - Node version: {_insert here_}
 - Yarn version: {_insert here_}

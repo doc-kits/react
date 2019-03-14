@@ -1,6 +1,6 @@
 ## Fonts
 
-Doc UI has been tested using the popular [Source Sans Pro](https://fonts.google.com/specimen/Source+Sans+Pro) font from Google Fonts. Within our components we use both a regular and a medium style font weight.
+Doc Kits: React has been tested using the popular [Source Sans Pro](https://fonts.google.com/specimen/Source+Sans+Pro) font from Google Fonts. Within our components we use both a regular and a medium style font weight.
 
 For the best presentation of the components, we strongly recommend you use a font with both a **400 weight** and a **600 weight**. There are many font families that have both of these weight variations available. You may choose to take a look at [Google Fonts](https://fonts.google.com) to find an appropriate font.
 

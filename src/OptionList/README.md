@@ -11,7 +11,7 @@ Useful to render options, parameters, or arguments in a stylish list structure.
 
 **Import**:
 
-`import { OptionList } from '@shockits/doc-ui';`
+`import { OptionList } from '@doc-kits/react';`
 
 **JSX**:
 

@@ -16,7 +16,7 @@ Useful to render a component as an example. The Playground allows users to edit 
 
 **Import**:
 
-`import { Playground } from '@shockits/doc-ui';`
+`import { Playground } from '@doc-kits/react';`
 
 **JSX**:
 

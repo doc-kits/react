@@ -1,5 +1,5 @@
 {
-  "repositoryUrl": "https://github.com/shockits/doc-ui.git",
+  "repositoryUrl": "https://github.com/doc-kits/react.git",
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",

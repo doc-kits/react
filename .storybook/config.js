@@ -22,8 +22,8 @@ addDecorator(withKnobs);
 addDecorator(withViewport);
 addDecorator(
   withOptions({
-    name: 'Doc UI',
-    url: 'https://github.com/shockits/doc-ui',
+    name: 'Doc Kits: React',
+    url: 'https://github.com/doc-kits/react',
   })
 );
 
