@@ -5,7 +5,8 @@
   "rules": {
     "interface-name": [true, "never-prefix"],
     "object-literal-sort-keys": false,
-    "ordered-imports": false
+    "ordered-imports": false,
+    "jsx-boolean-value": false
   },
   "linterOptions": {
     "exclude": ["**/__tests__/**"]

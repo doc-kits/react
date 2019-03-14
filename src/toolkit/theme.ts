@@ -5,7 +5,7 @@ export const mq = facepaint([
   `@media(min-width: 1280px)`,
 ]);
 
-export const colors = {
+export const palette = {
   primary: {
     blue: '#0099e5',
     green: '#45d29a',
@@ -23,12 +23,12 @@ export const colors = {
 };
 
 export const ui = {
-  text: { color: colors.primary.gray },
-  link: { color: colors.primary.blue },
+  text: { color: palette.primary.gray },
+  link: { color: palette.primary.blue },
 };
 
 export default {
   mq,
-  colors,
+  palette,
   ui,
 };

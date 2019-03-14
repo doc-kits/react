@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "module": "es2015",
+    "module": "esNext",
     "target": "es5",
     "lib": ["es6", "es2017", "dom"],
     "sourceMap": true,
@@ -16,6 +16,7 @@
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
+    "downlevelIteration": true,
     "declaration": true,
     "skipLibCheck": true,
     "esModuleInterop": true,

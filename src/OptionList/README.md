@@ -109,7 +109,7 @@ const styles = {
     padding: '0 0.4em',
     fontFamily: 'inherit',
   },
-  colors: {
+  palette: {
     link: '#0099e5',
   },
 };

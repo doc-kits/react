@@ -1,9 +1,9 @@
-// import { darken } from 'polished';
-import { ui, colors } from '../toolkit/theme';
+import { darken } from 'polished';
+import { ui, palette } from '../toolkit/theme';
 
 const styles = {
   wrapper: {
-    backgroundColor: 'white',
+    backgroundColor: `${darken(0.0099, 'white')}`,
     boxShadow: '0px 2px 4px 0px rgba(0, 0, 0, 0.25)',
     color: ui.text.color,
     display: 'flex',
@@ -30,14 +30,14 @@ const styles = {
     zIndex: '5',
   },
   icon: {
-    color: colors.grayScale['300'],
+    color: palette.grayScale['300'],
     '& svg': {
       width: ['0.750em', '0.875em'],
       height: ['0.750em', '0.875em'],
     },
   },
   colorValue: {
-    color: colors.grayScale['300'],
+    color: palette.grayScale['300'],
     fontSize: ['0.625em', '0.750rem', '0.875rem'],
     marginBottom: '0.857em',
     maxWidth: '11.071em',

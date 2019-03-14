@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<OptionList /> should render with all available passed in options 1`] = `
+exports[`<OptionList /> should render with all available passed in props 1`] = `
 <div
   className="css-1byi7qz"
 >

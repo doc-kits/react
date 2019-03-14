@@ -46,7 +46,7 @@ const Name = styled.div`
 
 class ColorBox extends Component<Props, State> {
   public static defaultProps = {
-    value: '',
+    hexValue: '',
     colorName: '',
   };
 
