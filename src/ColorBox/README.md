@@ -15,15 +15,15 @@ Useful to render a gallery of available colors belonging to a palette or scheme.
 **JSX**:
 
 ```js
-<ColorBox colorName="Red Barn" hexValue="#F00000" />
+<ColorBox name="Red Barn" hex="#F00000" />
 ```
 
 ## Props
 
-| Property  | Type   | Required | Default | Description                    |
-| --------- | ------ | -------- | ------- | ------------------------------ |
-| colorName | string | yes      | null    | A nickname for the color shown |
-| hexValue  | string | yes      | null    | A valid hex color value        |
+| Property | Type   | Required | Default | Description                    |
+| -------- | ------ | -------- | ------- | ------------------------------ |
+| name     | string | yes      | null    | A nickname for the color shown |
+| hex      | string | yes      | null    | A valid hex color value        |
 
 ## Styles
 
@@ -82,4 +82,4 @@ const styles = {
 
 ## Notes
 
-- You will get the best visual appearance of the component when the `colorName` is kept to a single line of text at all breakpoints.
+- You will get the best visual appearance of the component when the `name` is kept to a single line of text at all breakpoints.

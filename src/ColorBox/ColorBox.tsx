@@ -7,8 +7,8 @@ import constructTheme from '../toolkit/constructTheme';
 import defaultStyles from './styles';
 
 interface Props {
-  colorName: string;
-  hexValue: string;
+  name: string;
+  hex: string;
   readonly withStyles?: object;
   styles?: object;
 }
@@ -46,27 +46,27 @@ const Name = styled.div`
 
 class ColorBox extends Component<Props, State> {
   public static defaultProps = {
-    hexValue: '',
-    colorName: '',
+    hex: '',
+    name: '',
   };
 
   private static isValidHex = /^#[0-9a-f]{3}(?:[0-9a-f]{3})?$/i;
 
   public readonly state = {
     clicks: 1,
-    value: this.props.hexValue,
+    value: this.props.hex,
   };
 
   public componentDidUpdate(prevProps: Props) {
-    const { hexValue } = this.props;
+    const { hex } = this.props;
 
-    if (hexValue !== prevProps.hexValue && ColorBox.isValidHex.test(hexValue)) {
-      this.setState({ value: hexValue, clicks: 1 });
+    if (hex !== prevProps.hex && ColorBox.isValidHex.test(hex)) {
+      this.setState({ value: hex, clicks: 1 });
     }
   }
 
   public render() {
-    const { colorName, withStyles, styles } = this.props;
+    const { name, withStyles, styles } = this.props;
     const { value } = this.state;
 
     const componentTheme = () =>
@@ -80,7 +80,7 @@ class ColorBox extends Component<Props, State> {
               <FiRefreshCw />
             </Icon>
             <ColorValue>{value}</ColorValue>
-            <Name>{colorName}</Name>
+            <Name>{name}</Name>
           </Text>
         </Wrapper>
       </ThemeProvider>
@@ -88,10 +88,10 @@ class ColorBox extends Component<Props, State> {
   }
 
   private cycleValues = () => {
-    const { hexValue } = this.props;
+    const { hex } = this.props;
     const { clicks } = this.state;
     const clickCycle = clicks % 3;
-    const [r, g, b] = getRgb(hexValue);
+    const [r, g, b] = getRgb(hex);
 
     this.setState(
       {
@@ -101,7 +101,7 @@ class ColorBox extends Component<Props, State> {
         switch (clickCycle) {
           case 1:
             return this.setState({
-              value: hexToRgb(hexValue),
+              value: hexToRgb(hex),
             });
           case 2:
             return this.setState({
@@ -109,7 +109,7 @@ class ColorBox extends Component<Props, State> {
             });
           default:
             return this.setState({
-              value: this.props.hexValue,
+              value: this.props.hex,
             });
         }
       }
