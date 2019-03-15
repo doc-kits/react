@@ -2072,14 +2072,14 @@
   dependencies:
     "@types/node" "*"
 
-"@types/codemirror@^0.0.72":
+"@types/codemirror@0.0.72":
   version "0.0.72"
   resolved "https://registry.yarnpkg.com/@types/codemirror/-/codemirror-0.0.72.tgz#75e95e3b488717605d2591cd80c4d2ed88ff276e"
   integrity sha512-dKtEP139Jxdrog/6zW8akX3LdhJ3V8NjYNCpIHdBVVo6ZiYpShPamtQoGpVhzrUzTOu5A6NlozOSiZipCEVCow==
   dependencies:
     "@types/tern" "*"
 
-"@types/copy-text-to-clipboard@^1.0.0":
+"@types/copy-text-to-clipboard@1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@types/copy-text-to-clipboard/-/copy-text-to-clipboard-1.0.0.tgz#283c13d966e844a94070711850ea3b00c29d882c"
   integrity sha512-xEVSEOV82c4Z5OGSIqY5Q/l2/PBGh0uIy/F2vWTBz29gD6yda0EDhjaK9nGg4xAr6atU+2EbMK7hCawMK9WZjQ==
@@ -2283,7 +2283,7 @@
     "@types/unist" "*"
     "@types/vfile-message" "*"
 
-"@types/warning@^3.0.0":
+"@types/warning@3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@types/warning/-/warning-3.0.0.tgz#0d2501268ad8f9962b740d387c4654f5f8e23e52"
   integrity sha1-DSUBJorY+ZYrdA04fEZU9fjiPlI=
@@ -3273,7 +3273,7 @@ babel-plugin-react-docgen@^2.0.0:
     react-docgen "^3.0.0"
     recast "^0.14.7"
 
-babel-plugin-syntax-dynamic-import@^6.18.0:
+babel-plugin-syntax-dynamic-import@6.18.0:
   version "6.18.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-dynamic-import/-/babel-plugin-syntax-dynamic-import-6.18.0.tgz#8d6a26229c83745a9982a441051572caa179b1da"
   integrity sha1-jWomIpyDdFqZgqRBBRVyyqF5sdo=
@@ -7033,7 +7033,7 @@ icss-utils@^2.1.0:
   dependencies:
     postcss "^6.0.1"
 
-identity-obj-proxy@^3.0.0:
+identity-obj-proxy@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/identity-obj-proxy/-/identity-obj-proxy-3.0.0.tgz#94d2bda96084453ef36fbc5aaec37e0f79f1fc14"
   integrity sha1-lNK9qWCERT7zb7xarsN+D3nx/BQ=
