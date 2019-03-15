@@ -10,8 +10,5 @@ const readme = require('./README.md');
 storiesOf('ColorBox', module)
   .addDecorator(withReadme(readme))
   .add('default', () => (
-    <ColorBox
-      colorName={text('colorName', 'Red Barn')}
-      hexValue={text('hexValue', '#F00000')}
-    />
+    <ColorBox name={text('name', 'Red Barn')} hex={text('hex', '#F00000')} />
   ));

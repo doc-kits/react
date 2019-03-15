@@ -17,25 +17,21 @@ const mock = {
 describe('<ColorBox />', () => {
   it('should render with minimum requirements', () => {
     const tree = renderer
-      .create(<ColorBox colorName="Red Barn" hexValue="#F00000" />)
+      .create(<ColorBox name="Red Barn" hex="#F00000" />)
       .toJSON();
 
     expect(tree).toMatchSnapshot();
   });
 
-  it('should call componentDidUpdate if hexValue prop changed', () => {
-    const wrapper = shallow(
-      <ColorBox colorName="Red Barn" hexValue="#F00000" />
-    );
+  it('should call componentDidUpdate if hex prop changed', () => {
+    const wrapper = shallow(<ColorBox name="Red Barn" hex="#F00000" />);
 
-    wrapper.setProps({ hexValue: '#000000' });
+    wrapper.setProps({ hex: '#000000' });
     expect(mock.componentDidUpdate).toHaveBeenCalled();
   });
 
   it('should update the state and display value when cycleValues triggered', () => {
-    const wrapper = shallow(
-      <ColorBox colorName="Red Barn" hexValue="#F00000" />
-    );
+    const wrapper = shallow(<ColorBox name="Red Barn" hex="#F00000" />);
 
     wrapper
       .find('Styled(div)')

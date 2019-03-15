@@ -72,10 +72,10 @@ storiesOf('Playground', module)
       }}
     >
       <Fragment>
-        <ColorBox colorName="Red Barn" hexValue="#F00000" />
-        <ColorBox colorName="Cream Popsicle" hexValue="#F09320" />
-        <ColorBox colorName="Sky Blue" hexValue="#00AAE5" />
-        <ColorBox colorName="Lavender" hexValue="#977BB6" />
+        <ColorBox name="Red Barn" hex="#F00000" />
+        <ColorBox name="Cream Popsicle" hex="#F09320" />
+        <ColorBox name="Sky Blue" hex="#00AAE5" />
+        <ColorBox name="Lavender" hex="#977BB6" />
       </Fragment>
     </Playground>
   ));
