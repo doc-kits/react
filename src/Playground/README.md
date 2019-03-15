@@ -36,12 +36,12 @@ See [more examples](#examples) below.
 
 | Property   | Type   | Required | Default    | Description                                                                                                                        |
 | ---------- | ------ | -------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| components | object | yes*     | null       | The set of components the Playground will use as context for which components are being displayed.                                 |
+| components | object | yes*     | null       | The set of components the Playground will use as context for which components are being displayed                                  |
 | mode       | string | no       | full       | A preset representation of the Playground. Possible values are: `full`, `handleOnly`, and `containerOnly`.                         |
-| align      | string | no       | flex-start | Any valid value for Flexbox's `justify-content`.                                                                                   |
+| align      | string | no       | flex-start | Any valid value for Flexbox's `justify-content`                                                                                    |
 | actions    | object | no       | true       | Set individual action icons to `false` to remove from the view. The possible actions are: `copy`, `code`, `refresh`, and `source`. |
-| source     | string | no       | null       | An absolute URL to the original source code for the component being displayed in the Playground.                                   |
-| editor     | object | no       | null       | Any valid [CodeMirror options](https://codemirror.net/doc/manual.html#config) to be set on the code editor.                        |
+| source     | string | no       | null       | An absolute URL to the original source code for the component being displayed in the Playground                                    |
+| editor     | object | no       | null       | Any valid [CodeMirror options](https://codemirror.net/doc/manual.html#config) to be set on the code editor                         |
 
 *Only required when passing a React component as `children`. If passing JSX or HTML directly, `components` is _not_ required.
 
