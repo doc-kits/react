@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/doc-kits/react/compare/v1.3.0...v1.4.0) (2019-03-17)
+
+
+### Features
+
+* renaming of props ([#164](https://github.com/doc-kits/react/issues/164)) ([9e50a59](https://github.com/doc-kits/react/commit/9e50a59))
+
 # [1.3.0](https://github.com/doc-kits/react/compare/v1.2.0...v1.3.0) (2019-03-14)
 
 
