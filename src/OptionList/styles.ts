@@ -1,10 +1,11 @@
 import { darken } from 'polished';
-import { palette, ui } from '../toolkit/theme';
+import { base, palette, ui } from '../toolkit/theme';
 
 const codeBg = '#fafcfc';
 
 const styles = {
   wrapper: {
+    ...base,
     borderBottom: `1px solid ${palette.grayScale['200']}`,
     color: ui.text.color,
     fontSize: ['0.875rem', '0.875rem', '1rem'],

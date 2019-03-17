@@ -49,6 +49,12 @@ import { OptionList } from '@doc-kits/react';
 
 <OptionList
   tableTitle="Arguments"
+  definitions={[
+    {
+      key: 'cancellation_reason',
+      type: 'string',
+    },
+  ]}
   styles={{
     type: {
       color: '#ff00cc',
@@ -59,11 +65,5 @@ import { OptionList } from '@doc-kits/react';
       margin: '1em',
     },
   }}
-  definitions={[
-    {
-      key: 'cancellation_reason',
-      type: 'string',
-    },
-  ]}
 />;
 ```

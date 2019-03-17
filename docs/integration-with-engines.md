@@ -14,11 +14,16 @@ In one of your Docz `.mdx` files simply import the Doc Kits: React component in 
 
 `import { OptionList } from '@doc-kits/react';`
 
-That is it! You can run the `docs:dev` command from Docz to see your newly integrated component live. You can see a simple integration example [here](https://github.com/doc-kits/react/tree/master/examples/docz).
+That is it! You can run the `docz:dev` command from Docz to see your newly integrated component live.
 
 ## Styleguidist
 
 Coming soon.
+
+## Integration Examples
+
+- [Docz](https://github.com/doc-kits/react/tree/master/examples/docz)
+- [Styleguidist](https://github.com/doc-kits/react/tree/master/examples/styleguidist)
 
 ## Other Documentation Engines
 

@@ -1,17 +1,9 @@
----
-name: Option List
-menu: Components
-route: /components/option-list
----
-
-import { OptionList } from '@doc-kits/react';
-
-# Option List
-
 Shown in this example is the [OptionList](https://github.com/doc-kits/react/tree/master/src/OptionList) component
-from [Doc Kits: React](https://github.com/doc-kits/react) being integrated into the Docz documentation engine.
+from [Doc Kits: React](https://github.com/doc-kits/react) being integrated into the Styleguidist documentation engine.
 
----
+```jsx noeditor
+import { OptionList } from '@doc-kits/react';
+// import OptionList from './OptionList.js';
 
 <OptionList
   definitions={[
@@ -38,4 +30,5 @@ from [Doc Kits: React](https://github.com/doc-kits/react) being integrated into 
       values: ['active', 'inactive'],
     },
   ]}
-/>
+/>;
+```

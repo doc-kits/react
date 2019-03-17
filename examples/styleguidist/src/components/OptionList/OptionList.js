@@ -9,8 +9,9 @@ export default withStyles({
     color: 'black',
     fontSize: ['0.875rem', '1rem', '1.5rem'],
   },
-  // Extending code styles. boxShadow is not a default.
-  code: {
-    boxShadow: '1px 1px 2px 0px rgba(0,0,0,0.75)',
+  // Extending 'type' styles with 'text-decoration'
+  // 'textDecoration' is not in default styles
+  type: {
+    textDecoration: 'underline',
   },
 })(OptionList);
