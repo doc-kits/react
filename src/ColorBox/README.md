@@ -2,6 +2,12 @@
 
 Useful to render a gallery of available colors belonging to a palette or scheme.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/doc-kits/react/master/images/color-box.png?raw=true" width="500">
+</p>
+
+**[Demo](https://doc-kits.github.io/react/?selectedKind=ColorBox&selectedStory=default&full=0&addons=1&stories=1&panelRight=0&addonPanel=REACT_STORYBOOK%2Freadme%2Fpanel)**
+
 ## Features
 
 - Click on the color value to cycle through other formats of the same value.
