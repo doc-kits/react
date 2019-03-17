@@ -7,7 +7,7 @@ const styles = {
   wrapper: {
     borderBottom: `1px solid ${palette.grayScale['200']}`,
     color: ui.text.color,
-    fontSize: ['0.875rem', '1rem'],
+    fontSize: ['0.875rem', '0.875rem', '1rem'],
     lineHeight: '1.5',
   },
   title: {

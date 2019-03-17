@@ -92,6 +92,7 @@ class Playground extends Component<Props, State> {
   public state = {
     code: reactElementToJSXString(this.props.children, {
       useFragmentShortSyntax: false,
+      showDefaultProps: false,
     }),
     toggles: {
       showing: false,

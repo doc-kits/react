@@ -58,7 +58,7 @@ const styles = {
   wrapper: {
     borderBottom: '1px solid #cbd8de',
     color: '#4a6271',
-    fontSize: ['0.875rem', '1rem'],
+    fontSize: ['0.875rem', '0.875rem', '1rem'],
     lineHeight: '1.5',
   },
   title: {

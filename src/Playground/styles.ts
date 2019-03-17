@@ -3,7 +3,7 @@ import { darken } from 'polished';
 import { palette } from '../toolkit/theme';
 
 const HANDLE_SIZE = '18px';
-const ICON_SIZE = '0.9em';
+const ICON_SIZE = '1.15em';
 
 const colors = {
   editor: '#fbfcfd',
@@ -64,9 +64,10 @@ const styles = {
     alignItems: 'center',
     backgroundColor: colors.actions,
     display: 'flex',
+    fontSize: ['0.625rem', '0.625rem', '0.688rem', '0.688rem', '0.750rem'],
     justifyContent: 'flex-end',
-    paddingTop: '0.555em',
-    paddingBottom: '0.355em',
+    paddingTop: '0.925em',
+    paddingBottom: '0.725em',
   },
   action: {
     alignItems: 'center',
@@ -77,7 +78,7 @@ const styles = {
     color: colors.icon,
     display: 'flex',
     lineHeight: 1,
-    marginRight: '1em',
+    marginRight: '1.75em',
     opacity: 1,
     outline: 'none',
     padding: 0,
@@ -93,7 +94,6 @@ const styles = {
     },
   },
   actionText: {
-    fontSize: '0.688rem',
     marginLeft: '0.35em',
     textTransform: 'uppercase',
   },

@@ -1,8 +1,12 @@
 import facepaint from 'facepaint';
 
 export const mq = facepaint([
-  `@media(min-width: 600px)`,
-  `@media(min-width: 1280px)`,
+  `@media(min-width: 480px)`, // phone large
+  `@media(min-width: 600px)`, // tablet small
+  `@media(min-width: 768px)`, // tablet medium
+  `@media(min-width: 1024px)`, // tablet large
+  `@media(min-width: 1280px)`, // desktop small
+  `@media(min-width: 1440px)`, // desktop medium
 ]);
 
 export const palette = {

@@ -1,6 +1,8 @@
 import styled from '@emotion/styled';
+import { stripUnit } from 'polished';
 import React, { Component } from 'react';
 import { FiCode } from 'react-icons/fi';
+import { ICON_SIZE } from '../../styles';
 
 interface Props {
   onClick: () => void;
@@ -17,10 +19,11 @@ const ActionText = styled.div`
 class Code extends Component<Props, {}> {
   public render() {
     const { onClick } = this.props;
+    const iconSize = (stripUnit(ICON_SIZE) as any) * 1.17;
 
     return (
       <Action onClick={onClick}>
-        <FiCode size="1.15em" />
+        <FiCode size={`${iconSize}em`} />
         <ActionText>Code</ActionText>
       </Action>
     );

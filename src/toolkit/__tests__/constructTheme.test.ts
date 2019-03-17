@@ -15,7 +15,7 @@ describe('constructTheme', () => {
 
   it('should ensure withStyles wins without styles', () => {
     const withStyles = {
-      palette: { link: 'red' },
+      palette: { primary: { link: 'red' } },
       mq: () => 'mq',
       title: { color: 'purple' },
     };
@@ -27,12 +27,12 @@ describe('constructTheme', () => {
 
   it('should ensure styles always wins', () => {
     const withStyles = {
-      palette: { link: 'red' },
+      palette: { primary: { link: 'red' } },
       mq: () => 'mq',
       title: { color: 'purple' },
     };
     const styles = {
-      palette: { link: 'green' },
+      palette: { primary: { link: 'green' } },
       mq: () => 'bp',
       title: { color: 'blue' },
     };

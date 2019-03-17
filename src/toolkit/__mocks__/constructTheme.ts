@@ -1,5 +1,5 @@
 export default () => ({
-  palette: {},
+  palette: { primary: {}, grayScale: {} },
   ui: { link: {}, text: {} },
   mq: () => undefined,
 });
