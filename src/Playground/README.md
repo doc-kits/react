@@ -2,8 +2,8 @@
 
 Useful to render a component as an example. The Playground allows users to edit code and preview the changes live.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/doc-kits/react/master/images/playground.png?raw=true" width="500">
+<p align="left">
+  <img src="https://raw.githubusercontent.com/doc-kits/react/master/images/playground.png?raw=true" width="1000">
 </p>
 
 **[Demo](https://doc-kits.github.io/react/?selectedKind=Playground&selectedStory=default&full=0&addons=1&stories=1&panelRight=0&addonPanel=REACT_STORYBOOK%2Freadme%2Fpanel)**
