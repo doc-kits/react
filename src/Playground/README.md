@@ -89,6 +89,7 @@ const styles = {
     alignItems: 'center',
     backgroundColor: '#f7fbfa',
     display: 'flex',
+    fontSize: ['0.625rem', '0.625rem', '0.688rem', '0.688rem', '0.750rem'],
     justifyContent: 'flex-end',
     paddingTop: '0.555em',
     paddingBottom: '0.355em',
@@ -118,7 +119,6 @@ const styles = {
     },
   },
   actionText: {
-    fontSize: '0.688rem',
     marginLeft: '0.35em',
     textTransform: 'uppercase',
   },

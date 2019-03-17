@@ -17,7 +17,7 @@ import { withStyles, facepaint, OptionList } from '@doc-kits/react';
 const mq = facepaint([`@media(min-width: 768px)`, `@media(min-width: 1440px)`]);
 
 const MyOptionList = withStyles({
-  palette: { link: 'blue' },
+  palette: { primary: { link: 'blue' } },
   mq,
   type: {
     color: '#ff00cc',
@@ -42,7 +42,7 @@ const mq = facepaint([`@media(min-width: 768px)`, `@media(min-width: 1440px)`]);
 <OptionList
   tableTitle="Arguments"
   styles={{
-    palette: { link: 'blue' },
+    palette: { primary: { link: 'blue' } },
     mq,
     type: {
       color: '#ff00cc',

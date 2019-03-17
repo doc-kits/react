@@ -4,7 +4,7 @@ Useful to render a gallery of available colors belonging to a palette or scheme.
 
 ## Features
 
-- Click / tap on the color value to cycle through other formats of the same value.
+- Click on the color value to cycle through other formats of the same value.
 
 ## Usage
 
@@ -37,14 +37,14 @@ const styles = {
     color: '#4a6271',
     display: 'flex',
     fontSize: '1rem',
-    height: ['9.375em', '10.938em', '12.500em'], // 150px, 175px, 200px
+    height: ['9.375em', '9.375em', '10.938em'],
     lineHeight: '1.5',
     position: 'relative',
-    width: ['9.375em', '10.938em', '12.500em'], // 150px, 175px, 200px
+    width: ['9.375em', '9.375em', '10.938em'],
   },
   triangle: {
     borderStyle: 'solid',
-    borderWidth: ['0 125px 125px 0', '0 150px 150px 0', '0 170px 170px 0'],
+    borderWidth: ['0 125px 125px 0', '0 125px 125px 0', '0 150px 150px 0'],
     height: '0',
     position: 'absolute',
     right: '0',
@@ -61,19 +61,19 @@ const styles = {
   icon: {
     color: '#a8a8a8',
     '& svg': {
-      width: ['0.750em', '0.875em'],
-      height: ['0.750em', '0.875em'],
+      width: ['0.750em', '0.750em', '0.875em'],
+      height: ['0.750em', '0.750em', '0.875em'],
     },
   },
   colorValue: {
     color: '#a8a8a8',
-    fontSize: ['0.625em', '0.750rem', '0.875rem'],
+    fontSize: ['0.625rem', '0.625rem', '0.750rem'],
     marginBottom: '0.857em',
     maxWidth: '11.071em',
     textTransform: 'uppercase',
   },
   name: {
-    fontSize: ['0.875rem', '1rem', '1.125rem'],
+    fontSize: ['0.875rem', '0.875rem', '1rem'],
     fontWeight: '600',
     maxWidth: '9.375em',
   },

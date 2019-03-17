@@ -4,7 +4,7 @@ import OptionList from '../OptionList';
 
 jest.mock('../../toolkit/constructTheme', () => {
   return () => ({
-    palette: {},
+    palette: { primary: {}, grayScale: {} },
     ui: { link: {}, text: {} },
     required: {},
     optional: {},

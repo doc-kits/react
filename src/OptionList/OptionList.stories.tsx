@@ -11,6 +11,7 @@ storiesOf('OptionList', module)
   .addDecorator(withReadme(readme))
   .add('default', () => (
     <OptionList
+      tableTitle={text('tableTitle', 'Options')}
       definitions={[
         {
           key: text('key', 'cancellation_reason'),
@@ -35,6 +36,7 @@ storiesOf('OptionList', module)
   ))
   .add('multiple options', () => (
     <OptionList
+      tableTitle={text('tableTitle', 'Options')}
       definitions={[
         {
           key: 'product_returned',
@@ -46,7 +48,7 @@ storiesOf('OptionList', module)
         },
         {
           key: 'status',
-          required: true,
+          required: boolean('required', true),
           type: 'string',
           description: [
             'Determines the current ',
