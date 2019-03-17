@@ -9,7 +9,6 @@
     "docz:build": "docz build"
   },
   "devDependencies": {
-    "@doc-kits/react": "https://github.com/doc-kits/react.git",
     "docz": "^0.13.7",
     "docz-theme-default": "^0.13.7",
     "react": "^16.7.0",
