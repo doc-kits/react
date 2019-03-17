@@ -2,8 +2,8 @@
 
 Useful to render options, parameters, or arguments in a stylish list structure.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/doc-kits/react/master/images/option-list.png?raw=true" width="500">
+<p align="left">
+  <img src="https://raw.githubusercontent.com/doc-kits/react/master/images/option-list.png?raw=true" width="1000">
 </p>
 
 **[Demo](https://doc-kits.github.io/react/?selectedKind=OptionList&selectedStory=default&full=0&addons=1&stories=1&panelRight=0&addonPanel=REACT_STORYBOOK%2Freadme%2Fpanel)**
