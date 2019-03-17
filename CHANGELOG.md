@@ -1,3 +1,10 @@
+## [1.5.2](https://github.com/doc-kits/react/compare/v1.5.1...v1.5.2) (2019-03-17)
+
+
+### Bug Fixes
+
+* export new components from library ([#173](https://github.com/doc-kits/react/issues/173)) ([5df927f](https://github.com/doc-kits/react/commit/5df927f))
+
 ## [1.5.1](https://github.com/doc-kits/react/compare/v1.5.0...v1.5.1) (2019-03-17)
 
 
