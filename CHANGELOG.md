@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/doc-kits/react/compare/v1.4.0...v1.5.0) (2019-03-17)
+
+
+### Features
+
+* turn on npm releasing ([#171](https://github.com/doc-kits/react/issues/171)) ([61be9e5](https://github.com/doc-kits/react/commit/61be9e5))
+
 # [1.4.0](https://github.com/doc-kits/react/compare/v1.3.0...v1.4.0) (2019-03-17)
 
 
