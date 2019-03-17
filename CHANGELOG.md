@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/doc-kits/react/compare/v1.5.0...v1.5.1) (2019-03-17)
+
+
+### Bug Fixes
+
+* docz example ([#172](https://github.com/doc-kits/react/issues/172)) ([9894cdd](https://github.com/doc-kits/react/commit/9894cdd))
+
 # [1.5.0](https://github.com/doc-kits/react/compare/v1.4.0...v1.5.0) (2019-03-17)
 
 
