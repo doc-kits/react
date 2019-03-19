@@ -26,6 +26,7 @@ interface Props {
   editor?: object;
   readonly withStyles?: object;
   styles?: object;
+  [propName: string]: any;
 }
 
 interface State {
@@ -78,7 +79,7 @@ const EditorWrapper = posed.div({
 });
 
 class Playground extends Component<Props, State> {
-  public static defaultProps = {
+  private static defaultProps = {
     mode: 'full',
     align: 'flex-start',
     actions: {
@@ -102,7 +103,7 @@ class Playground extends Component<Props, State> {
   };
 
   private resizableProps = {
-    minWidth: 320,
+    minWidth: 360,
     maxWidth: '100%',
     enable: {
       bottom: false,
@@ -136,6 +137,7 @@ class Playground extends Component<Props, State> {
       source,
       withStyles,
       styles,
+      ...restOfProps
     } = merge(Playground.defaultProps, this.props);
 
     const disableActions = mode !== 'full' || (!actions.code && !source);
@@ -145,7 +147,7 @@ class Playground extends Component<Props, State> {
     return (
       <ThemeProvider theme={componentTheme}>
         <Resizable {...this.resizableProps}>
-          <Wrapper mode={mode} code={code} scope={components}>
+          <Wrapper mode={mode} code={code} scope={components} {...restOfProps}>
             <StyledPreview align={align} />
 
             {!disableActions && (

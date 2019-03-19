@@ -11,10 +11,10 @@
 
 ## 💅 Features
 
-- Built using [React](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/), [Emotion](https://emotion.sh/), and [Facepaint](https://github.com/emotion-js/facepaint).
 - Components can easily be integrated into documentation frameworks like [Docz](https://www.docz.site/), [Styleguidist](https://react-styleguidist.js.org/), and more.
 - Components can be used in isolation. Use one, many, or all.
 - Fully customizable styles via Emotion and Facepaint.
+- Built using [React](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/), [Emotion](https://emotion.sh/), and [Facepaint](https://github.com/emotion-js/facepaint).
 
 ## ⬇️ Install
 
