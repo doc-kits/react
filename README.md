@@ -3,11 +3,10 @@
 </p>
 
 <p align="center">
-  <img src="https://badgen.net/npm/v/doc-kits/react" alt="Version">
-  <img src="https://badgen.net/badge/license/MIT/blue" alt="License">
-  <img src="https://badgen.net/david/dep/doc-kits/react" alt="Dependencies">
-  <img src="https://badgen.net/packagephobia/publish/doc-kits/react" alt="Package Size">
-  <img src="https://badgen.net/travis/doc-kits/react" alt="CI Build">
+  <img src="https://img.shields.io/npm/v/@doc-kits/react.svg" alt="Version">
+  <img src="https://img.shields.io/npm/l/@doc-kits/react.svg" alt="License">
+  <img src="https://img.shields.io/david/doc-kits/react.svg" alt="Dependencies">
+  <img src="https://img.shields.io/travis/com/doc-kits/react/master.svg" alt="CI Build">
 </p>
 
 ## 💅 Features
@@ -38,6 +37,12 @@ Each component can be imported by name like shown above. See the demo section be
 - [Emotion & Facepaint](docs/emotion-facepaint.md)
 - [Fonts](docs/fonts.md)
 - [Integration with Documentation Engines](docs/integration-with-engines.md)
+
+## Available Components
+
+- [Playground](src/Playground/README.md)
+- [Option List](src/OptionList/README.md)
+- [Color Box](src/ColorBox/README.md)
 
 ## 🎩 Demo
 

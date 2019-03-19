@@ -1,5 +1,11 @@
 import facepaint from 'facepaint';
 
+export const base = {
+  boxSizing: 'border-box',
+  fontFamily: '"Muli", sans-serif',
+  fontSize: '1rem',
+};
+
 export const mq = facepaint([
   `@media(min-width: 480px)`, // phone large
   `@media(min-width: 600px)`, // tablet small
@@ -32,6 +38,7 @@ export const ui = {
 };
 
 export default {
+  base,
   mq,
   palette,
   ui,

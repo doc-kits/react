@@ -30,7 +30,7 @@ exports[`<Playground /> should render with all available passed in props 1`] = `
   minWidth={320}
 >
   <LiveProvider
-    className="css-5aoufr"
+    className="css-1516d4s"
     code="<div>
   Playground
 </div>"
@@ -52,7 +52,7 @@ exports[`<Playground /> should render with all available passed in props 1`] = `
       pose="closed"
     >
       <BaseEditor
-        className="css-1j22wvk"
+        className="css-1t7va61"
         onBeforeChange={[Function]}
         options={
           Object {
@@ -103,7 +103,7 @@ exports[`<Playground /> should render with minimum requirements 1`] = `
   minWidth={320}
 >
   <LiveProvider
-    className="css-5aoufr"
+    className="css-1516d4s"
     code="<div>
   Playground
 </div>"
@@ -201,7 +201,7 @@ exports[`<Playground /> should render with minimum requirements 1`] = `
       pose="closed"
     >
       <BaseEditor
-        className="css-umkx8t"
+        className="css-1dca0wa"
         onBeforeChange={[Function]}
         options={
           Object {

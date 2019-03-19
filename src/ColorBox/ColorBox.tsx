@@ -71,6 +71,7 @@ class ColorBox extends Component<Props, State> {
 
     const componentTheme = () =>
       constructTheme(defaultStyles, withStyles, styles);
+
     return (
       <ThemeProvider theme={componentTheme}>
         <Wrapper>

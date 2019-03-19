@@ -1,10 +1,11 @@
 import { darken } from 'polished';
-import { ui, palette } from '../toolkit/theme';
+import { base, ui, palette } from '../toolkit/theme';
 
 const boxSizes = ['9.375em', '9.375em', '10.938em']; // 150px, 175px
 
 const styles = {
   wrapper: {
+    ...base,
     backgroundColor: `${darken(0.0099, 'white')}`,
     boxShadow: '0px 2px 4px 0px rgba(0, 0, 0, 0.25)',
     color: ui.text.color,

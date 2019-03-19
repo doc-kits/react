@@ -1,6 +1,6 @@
 import { keyframes } from '@emotion/core';
 import { darken } from 'polished';
-import { palette } from '../toolkit/theme';
+import { base, palette } from '../toolkit/theme';
 
 const HANDLE_SIZE = '18px';
 const ICON_SIZE = '1.15em';
@@ -27,6 +27,7 @@ const fadeIn = keyframes`
 
 const styles = {
   wrapper: {
+    ...base,
     borderRadius: '3px',
     borderBottomRightRadius: 0,
     borderTopRightRadius: 0,
@@ -52,7 +53,7 @@ const styles = {
     borderTop: `1px solid ${palette.grayScale['200']}`,
     '& .CodeMirror': {
       backgroundColor: colors.editor,
-      fontFamily: "'Inconsolata', monospace",
+      fontFamily: 'monospace',
       fontSize: '0.875em',
       height: 'auto',
     },

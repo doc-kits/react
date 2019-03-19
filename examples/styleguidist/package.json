@@ -1,0 +1,27 @@
+{
+  "name": "styleguidist-test-app",
+  "version": "1.0.0",
+  "description": "Testing Doc Kits: React integration with Styleguidist",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "styleguidist server"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "@doc-kits/react": "^1.5.2",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.1",
+    "react-styleguidist": "^9.0.4",
+    "style-loader": "^0.23.1"
+  },
+  "dependencies": {},
+  "browserslist": [
+    ">1%",
+    "last 1 version",
+    "Firefox ESR",
+    "not dead"
+  ]
+}
