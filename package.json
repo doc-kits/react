@@ -25,7 +25,6 @@
     "react-components",
     "doc-kits",
     "design-system",
-    "typescript",
     "ui"
   ],
   "files": [
