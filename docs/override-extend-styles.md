@@ -67,3 +67,7 @@ import { OptionList } from '@doc-kits/react';
   }}
 />;
 ```
+
+## props
+
+All extra props not used by Doc Kits: React will be passed through to the _wrapper_ of the component.
