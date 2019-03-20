@@ -1,3 +1,17 @@
+# [1.6.0](https://github.com/doc-kits/react/compare/v1.5.3...v1.6.0) (2019-03-20)
+
+
+### Features
+
+* more updates ([#180](https://github.com/doc-kits/react/issues/180)) ([4a9d6cc](https://github.com/doc-kits/react/commit/4a9d6cc))
+
+## [1.5.3](https://github.com/doc-kits/react/compare/v1.5.2...v1.5.3) (2019-03-19)
+
+
+### Bug Fixes
+
+* add more examples ([#178](https://github.com/doc-kits/react/issues/178)) ([018fcfa](https://github.com/doc-kits/react/commit/018fcfa))
+
 ## [1.5.2](https://github.com/doc-kits/react/compare/v1.5.1...v1.5.2) (2019-03-17)
 
 
