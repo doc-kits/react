@@ -11,6 +11,7 @@ interface Props {
   hex: string;
   readonly withStyles?: object;
   styles?: object;
+  [propName: string]: any;
 }
 
 interface State {
@@ -66,7 +67,7 @@ class ColorBox extends Component<Props, State> {
   }
 
   public render() {
-    const { name, withStyles, styles } = this.props;
+    const { name, hex, withStyles, styles, ...restOfProps } = this.props;
     const { value } = this.state;
 
     const componentTheme = () =>
@@ -74,7 +75,7 @@ class ColorBox extends Component<Props, State> {
 
     return (
       <ThemeProvider theme={componentTheme}>
-        <Wrapper>
+        <Wrapper {...restOfProps}>
           <Triangle color={value} />
           <Text onClick={this.cycleValues}>
             <Icon>

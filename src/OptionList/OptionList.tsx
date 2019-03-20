@@ -14,10 +14,11 @@ interface Definition {
 }
 
 interface Props {
-  tableTitle: string;
+  tableTitle?: string;
   definitions: Definition[];
   readonly withStyles?: object;
   styles?: object;
+  [propName: string]: any;
 }
 
 interface RequiredProps {
@@ -114,13 +115,19 @@ const Code = styled('code')`
   ${p => p.theme.mq(p.theme.code)};
 `;
 
-const OptionList = ({ tableTitle, definitions, withStyles, styles }: Props) => {
+const OptionList = ({
+  tableTitle,
+  definitions,
+  withStyles,
+  styles,
+  ...restOfProps
+}: Props) => {
   const componentTheme = () =>
     constructTheme(defaultStyles, withStyles, styles);
 
   return (
     <ThemeProvider theme={componentTheme}>
-      <Wrapper>
+      <Wrapper {...restOfProps}>
         <Title>{tableTitle}</Title>
 
         {definitions.map(argument => {

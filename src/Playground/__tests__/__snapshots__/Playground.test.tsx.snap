@@ -27,7 +27,7 @@ exports[`<Playground /> should render with all available passed in props 1`] = `
     }
   }
   maxWidth="100%"
-  minWidth={320}
+  minWidth={360}
 >
   <LiveProvider
     className="css-1516d4s"
@@ -100,7 +100,7 @@ exports[`<Playground /> should render with minimum requirements 1`] = `
     }
   }
   maxWidth="100%"
-  minWidth={320}
+  minWidth={360}
 >
   <LiveProvider
     className="css-1516d4s"
@@ -114,10 +114,10 @@ exports[`<Playground /> should render with minimum requirements 1`] = `
       className="css-xlsnbg"
     />
     <div
-      className="css-1uv3g9l"
+      className="css-tiv4po"
     >
       <button
-        className="css-7rzxlt"
+        className="css-9luasl"
         onClick={[Function]}
       >
         <svg
@@ -151,7 +151,7 @@ exports[`<Playground /> should render with minimum requirements 1`] = `
         </div>
       </button>
       <button
-        className="css-7rzxlt"
+        className="css-9luasl"
         disabled={false}
         onClick={[Function]}
       >
