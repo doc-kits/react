@@ -70,6 +70,7 @@ storiesOf('Playground', module)
         code: boolean('code icon', true),
         refresh: boolean('refresh icon', true),
       }}
+      editor={{ lineNumbers: true }}
     >
       <Fragment>
         <ColorBox name="Red Barn" hex="#F00000" />

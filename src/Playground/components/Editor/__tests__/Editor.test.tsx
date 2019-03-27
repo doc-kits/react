@@ -1,22 +1,25 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
+// import { Controlled as BaseEditor } from 'react-codemirror2';
 import Editor from '../Editor';
 
-const mock = {
-  importThemeCss: jest.spyOn(Editor.prototype as any, 'importThemeCss'),
-};
+// const mock = {
+//   importThemeCss: jest.spyOn(Editor.prototype as any, 'importThemeCss'),
+// };
 
 describe('<Editor />', () => {
   it('should render the editor', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <Editor code="<div />" handleChange={() => undefined} />
     );
 
-    expect(wrapper.find('Styled(BaseEditor)')).toHaveLength(1);
+    console.log('XX', wrapper.debug());
+    console.log('XY', wrapper.find('Editor'));
+    expect(wrapper.find('BaseEditor')).toHaveLength(1);
   });
 
   it('should override default options with prop options', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <Editor
         code="<div />"
         handleChange={() => undefined}
@@ -28,7 +31,7 @@ describe('<Editor />', () => {
   });
 
   it('should merge any valid CodeMirror option with defaults', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <Editor
         code="<div />"
         handleChange={() => undefined}
@@ -40,24 +43,40 @@ describe('<Editor />', () => {
   });
 
   it('should import theme css if a theme was passed', () => {
+    // const wrapper = mount(
+    //   <Editor
+    //     code="<div />"
+    //     handleChange={() => undefined}
+    //     options={{ theme: 'material' }}
+    //   />
+    // );
+
     const wrapper = shallow(
       <Editor
         code="<div />"
         handleChange={() => undefined}
         options={{ theme: 'material' }}
       />
-    );
+    ).get(0);
 
-    wrapper.instance();
-    expect(mock.importThemeCss).toHaveBeenCalled();
+    // const instance = wrapper.instance();
+    jest.spyOn((wrapper.type as any).prototype, 'importThemeCss');
+    // wrapper.instance().forceUpdate();
+    mount(wrapper);
+    expect((wrapper.type as any).prototype.importThemeCss).toHaveBeenCalled();
   });
 
   it('should not import theme css if no theme was passed', () => {
     const wrapper = shallow(
       <Editor code="<div />" handleChange={() => undefined} />
-    );
+    ).get(0);
 
-    wrapper.instance();
-    expect(mock.importThemeCss).not.toHaveBeenCalled();
+    jest.spyOn((wrapper.type as any).prototype, 'importThemeCss');
+    mount(wrapper);
+    // console.log('XX', Editor.prototype);
+    // wrapper.instance().forceUpdate();
+    expect(
+      (wrapper.type as any).prototype.importThemeCss
+    ).not.toHaveBeenCalled();
   });
 });

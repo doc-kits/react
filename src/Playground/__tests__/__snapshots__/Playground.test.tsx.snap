@@ -1,168 +1,153 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Playground /> should render with all available passed in props 1`] = `
-<Resizable
-  enable={
+<div
+  className="css-n5bgog"
+  styles={
     Object {
-      "bottom": false,
-      "bottomLeft": false,
-      "bottomRight": false,
-      "left": false,
-      "right": true,
-      "top": false,
-      "topLeft": false,
-      "topRight": false,
-    }
-  }
-  handleComponent={
-    Object {
-      "right": [Function],
-    }
-  }
-  handleStyles={
-    Object {
-      "right": Object {
-        "right": 8,
+      "error": Object {
+        "color": "green",
       },
     }
   }
-  maxWidth="100%"
-  minWidth={360}
 >
-  <LiveProvider
-    className="css-1516d4s"
-    code="<div>
-  Playground
-</div>"
-    mode="handleOnly"
-    scope={
+  <Resizable
+    enable={
       Object {
-        "OptionList": [Function],
+        "bottom": false,
+        "bottomLeft": false,
+        "bottomRight": false,
+        "left": false,
+        "right": true,
+        "top": false,
+        "topLeft": false,
+        "topRight": false,
       }
     }
+    handleComponent={
+      Object {
+        "right": [Function],
+      }
+    }
+    handleStyles={
+      Object {
+        "right": Object {
+          "right": 8,
+        },
+      }
+    }
+    maxWidth="100%"
+    minWidth={360}
   >
-    <LivePreview
-      align="flex-start"
-      className="css-xlsnbg"
-    />
-    <LiveError
-      className="css-1mfynrb"
-    />
-    <div
-      pose="closed"
-    >
-      <BaseEditor
-        className="css-1t7va61"
-        onBeforeChange={[Function]}
-        options={
-          Object {
-            "lineNumbers": true,
-            "lineWrapping": true,
-            "mode": "jsx",
-            "scrollbarStyle": null,
-            "tabSize": 2,
-            "viewportMargin": Infinity,
-          }
-        }
-        value="<div>
+    <LiveProvider
+      className="css-rmcupu"
+      code="<div>
   Playground
 </div>"
+      mode="handleOnly"
+      scope={
+        Object {
+          "OptionList": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "WithStyles(OptionList)",
+            "render": [Function],
+            "styles": [Function],
+          },
+        }
+      }
+      styles={
+        Object {
+          "error": Object {
+            "color": "green",
+          },
+        }
+      }
+    >
+      <LivePreview
+        className="css-1kfzae4"
       />
-    </div>
-  </LiveProvider>
-</Resizable>
+      <LiveError
+        className="css-1c2z0lj"
+      />
+      <div
+        pose="closed"
+      >
+        <BaseEditor
+          className="css-1a19nw0"
+          onBeforeChange={[Function]}
+          options={
+            Object {
+              "lineNumbers": true,
+              "lineWrapping": true,
+              "mode": "jsx",
+              "scrollbarStyle": null,
+              "tabSize": 2,
+              "viewportMargin": Infinity,
+            }
+          }
+          value="<div>
+  Playground
+</div>"
+        />
+      </div>
+    </LiveProvider>
+  </Resizable>
+</div>
 `;
 
 exports[`<Playground /> should render with minimum requirements 1`] = `
-<Resizable
-  enable={
-    Object {
-      "bottom": false,
-      "bottomLeft": false,
-      "bottomRight": false,
-      "left": false,
-      "right": true,
-      "top": false,
-      "topLeft": false,
-      "topRight": false,
-    }
-  }
-  handleComponent={
-    Object {
-      "right": [Function],
-    }
-  }
-  handleStyles={
-    Object {
-      "right": Object {
-        "right": 8,
-      },
-    }
-  }
-  maxWidth="100%"
-  minWidth={360}
+<div
+  className="css-n5bgog"
 >
-  <LiveProvider
-    className="css-1516d4s"
-    code="<div>
+  <Resizable
+    enable={
+      Object {
+        "bottom": false,
+        "bottomLeft": false,
+        "bottomRight": false,
+        "left": false,
+        "right": true,
+        "top": false,
+        "topLeft": false,
+        "topRight": false,
+      }
+    }
+    handleComponent={
+      Object {
+        "right": [Function],
+      }
+    }
+    handleStyles={
+      Object {
+        "right": Object {
+          "right": 8,
+        },
+      }
+    }
+    maxWidth="100%"
+    minWidth={360}
+  >
+    <LiveProvider
+      className="css-rmcupu"
+      code="<div>
   Playground
 </div>"
-    mode="full"
-  >
-    <LivePreview
-      align="flex-start"
-      className="css-xlsnbg"
-    />
-    <div
-      className="css-tiv4po"
+      mode="full"
     >
-      <button
-        className="css-9luasl"
-        onClick={[Function]}
+      <LivePreview
+        className="css-1kfzae4"
+      />
+      <div
+        className="css-1wr532d"
       >
-        <svg
-          fill="none"
-          height="1.3455em"
-          size="1.3455em"
-          stroke="currentColor"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          style={
-            Object {
-              "color": undefined,
-            }
-          }
-          viewBox="0 0 24 24"
-          width="1.3455em"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <polyline
-            points="16 18 22 12 16 6"
-          />
-          <polyline
-            points="8 6 2 12 8 18"
-          />
-        </svg>
-        <div
-          className="css-1rcu8eg"
-        >
-          Code
-        </div>
-      </button>
-      <button
-        className="css-9luasl"
-        disabled={false}
-        onClick={[Function]}
-      >
-        <div
-          pose="stop"
-          rotation={0}
+        <button
+          className="css-ne335i"
+          onClick={[Function]}
         >
           <svg
             fill="none"
-            height="1.15em"
-            size="1.15em"
+            height="1.3455em"
+            size="1.3455em"
             stroke="currentColor"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -173,51 +158,91 @@ exports[`<Playground /> should render with minimum requirements 1`] = `
               }
             }
             viewBox="0 0 24 24"
-            width="1.15em"
+            width="1.3455em"
             xmlns="http://www.w3.org/2000/svg"
           >
             <polyline
-              points="23 4 23 10 17 10"
+              points="16 18 22 12 16 6"
             />
             <polyline
-              points="1 20 1 14 7 14"
-            />
-            <path
-              d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"
+              points="8 6 2 12 8 18"
             />
           </svg>
-        </div>
-        <div
-          className="css-1rcu8eg"
+          <div
+            className="css-1n7v7o2"
+          >
+            Code
+          </div>
+        </button>
+        <button
+          className="css-ne335i"
+          disabled={false}
+          onClick={[Function]}
         >
-          Refresh
-        </div>
-      </button>
-    </div>
-    <LiveError
-      className="css-s7cjye"
-    />
-    <div
-      pose="closed"
-    >
-      <BaseEditor
-        className="css-1dca0wa"
-        onBeforeChange={[Function]}
-        options={
-          Object {
-            "lineNumbers": false,
-            "lineWrapping": true,
-            "mode": "jsx",
-            "scrollbarStyle": null,
-            "tabSize": 2,
-            "viewportMargin": Infinity,
+          <div
+            pose="stop"
+            rotation={0}
+          >
+            <svg
+              fill="none"
+              height="1.15em"
+              size="1.15em"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 24 24"
+              width="1.15em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline
+                points="23 4 23 10 17 10"
+              />
+              <polyline
+                points="1 20 1 14 7 14"
+              />
+              <path
+                d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"
+              />
+            </svg>
+          </div>
+          <div
+            className="css-1n7v7o2"
+          >
+            Refresh
+          </div>
+        </button>
+      </div>
+      <LiveError
+        className="css-1c2z0lj"
+      />
+      <div
+        pose="closed"
+      >
+        <BaseEditor
+          className="css-1jewlrr"
+          onBeforeChange={[Function]}
+          options={
+            Object {
+              "lineNumbers": false,
+              "lineWrapping": true,
+              "mode": "jsx",
+              "scrollbarStyle": null,
+              "tabSize": 2,
+              "viewportMargin": Infinity,
+            }
           }
-        }
-        value="<div>
+          value="<div>
   Playground
 </div>"
-      />
-    </div>
-  </LiveProvider>
-</Resizable>
+        />
+      </div>
+    </LiveProvider>
+  </Resizable>
+</div>
 `;

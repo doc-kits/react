@@ -1,16 +1,19 @@
-import styled from '@emotion/styled';
 import React, { Component, ReactNode } from 'react';
 import posed from 'react-pose';
-import { ThemeProvider } from 'emotion-theming';
 import { LiveProvider, LiveError, LivePreview } from 'react-live';
+import { ClassNames } from '@emotion/core';
+// import { transform } from '@babel/core';
+// @ts-ignore
+import * as Babel from '@babel/standalone';
 import Resizable from 're-resizable';
-import reactElementToJSXString from 'react-element-to-jsx-string';
+// import reactElementToJSXString from 'react-element-to-jsx-string';
 import merge from 'deepmerge';
 import Editor from './components/Editor';
 import Handle from './components/Handle';
 import { Copy, Code, Refresh, Source } from './components/Actions';
-import constructTheme from '../toolkit/constructTheme';
-import defaultStyles from './styles';
+import withStyles from '../toolkit/withStyles';
+import styles from './styles';
+// @ts-ignore
 
 interface Props {
   children: ReactNode;
@@ -24,8 +27,10 @@ interface Props {
   };
   source?: string;
   editor?: object;
-  readonly withStyles?: object;
-  styles?: object;
+  readonly classes: {
+    [propName: string]: object;
+  };
+  mq: (styles: object) => any;
   [propName: string]: any;
 }
 
@@ -42,43 +47,13 @@ interface ToggleOptions {
   withTimeout: boolean;
 }
 
-interface WrapperProps {
-  code: string;
-  mode: string;
-  scope?: object;
-}
-
-interface PreviewProps {
-  align: string;
-}
-
-const Wrapper = styled(LiveProvider)<WrapperProps>`
-  ${p => p.theme.mq(p.theme.wrapper)};
-
-  border: ${p => p.mode === 'containerOnly' && 'none'};
-  width: ${p => p.mode === 'containerOnly' && '100%'};
-`;
-
-const StyledPreview = styled(LivePreview)<PreviewProps>`
-  ${p => p.theme.mq(p.theme.preview)};
-
-  justify-content: ${p => p.align};
-`;
-
-const StyledError = styled(LiveError)`
-  ${p => p.theme.mq(p.theme.error)};
-`;
-
-const Actions = styled.div`
-  ${p => p.theme.mq(p.theme.actions)};
-`;
-
 const EditorWrapper = posed.div({
   closed: { height: 0, overflow: 'hidden' },
   open: { height: 'auto' },
 });
 
 class Playground extends Component<Props, State> {
+  public static readonly styles = styles;
   private static defaultProps = {
     mode: 'full',
     align: 'flex-start',
@@ -90,11 +65,14 @@ class Playground extends Component<Props, State> {
     },
   };
 
+  public raw = require(`!raw-loader!./raw-test.js`);
+
   public state = {
-    code: reactElementToJSXString(this.props.children, {
-      useFragmentShortSyntax: false,
-      showDefaultProps: false,
-    }),
+    code: this.raw.default,
+    // code: reactElementToJSXString(this.props.children, {
+    //   useFragmentShortSyntax: false,
+    //   showDefaultProps: false,
+    // }),
     toggles: {
       showing: false,
       refreshing: false,
@@ -126,6 +104,7 @@ class Playground extends Component<Props, State> {
   };
 
   public render() {
+    // console.log('RAW', raw);
     const toggle = this.toggle;
     const { code, toggles } = this.state;
     const {
@@ -135,55 +114,79 @@ class Playground extends Component<Props, State> {
       actions,
       editor,
       source,
-      withStyles,
-      styles,
+      classes,
+      mq,
       ...restOfProps
     } = merge(Playground.defaultProps, this.props);
-
     const disableActions = mode !== 'full' || (!actions.code && !source);
-    const componentTheme = () =>
-      constructTheme(defaultStyles, withStyles, styles);
 
     return (
-      <ThemeProvider theme={componentTheme}>
-        <Resizable {...this.resizableProps}>
-          <Wrapper mode={mode} code={code} scope={components} {...restOfProps}>
-            <StyledPreview align={align} />
+      <ClassNames>
+        {({ css }) => {
+          const c = (style: object) => css(mq(style));
 
-            {!disableActions && (
-              <Actions>
-                {actions.copy && (
-                  <Copy
-                    code={code}
-                    show={toggles.showing}
-                    inProgress={toggles.copying}
-                    toggle={toggle}
-                  />
-                )}
+          return (
+            <div className={c(classes.root)} {...restOfProps}>
+              <Resizable {...this.resizableProps}>
+                <LiveProvider
+                  className={c(classes.wrapper)}
+                  mode={mode}
+                  code={code}
+                  scope={components}
+                  // noInline={true}
+                  // transformCode={this.transformCode}
+                  {...restOfProps}
+                >
+                  <LivePreview className={c(classes.preview)} />
 
-                {actions.code && <Code onClick={this.toggleCode} />}
+                  {!disableActions && (
+                    <div className={c(classes.actions)}>
+                      {actions.copy && (
+                        <Copy
+                          code={code}
+                          show={toggles.showing}
+                          inProgress={toggles.copying}
+                          toggle={toggle}
+                        />
+                      )}
 
-                {actions.refresh && (
-                  <Refresh inProgress={toggles.refreshing} toggle={toggle} />
-                )}
+                      {actions.code && <Code onClick={this.toggleCode} />}
 
-                {source && actions.source && <Source link={source} />}
-              </Actions>
-            )}
+                      {actions.refresh && (
+                        <Refresh
+                          inProgress={toggles.refreshing}
+                          toggle={toggle}
+                        />
+                      )}
 
-            <StyledError />
-            <EditorWrapper pose={toggles.showing ? 'open' : 'closed'}>
-              <Editor
-                code={code}
-                options={editor}
-                handleChange={this.handleChange}
-              />
-            </EditorWrapper>
-          </Wrapper>
-        </Resizable>
-      </ThemeProvider>
+                      {source && actions.source && <Source link={source} />}
+                    </div>
+                  )}
+
+                  <LiveError className={c(classes.error)} />
+                  <EditorWrapper pose={toggles.showing ? 'open' : 'closed'}>
+                    <Editor
+                      code={code}
+                      options={editor}
+                      handleChange={this.handleChange}
+                    />
+                  </EditorWrapper>
+                </LiveProvider>
+              </Resizable>
+            </div>
+          );
+        }}
+      </ClassNames>
     );
   }
+
+  // private transformCode = (code: any) => {
+  //   const output = Babel.transform(code, {
+  //     presets: ['es2015', 'react'],
+  //   }).code;
+  //   console.log(output);
+  //   return output;
+  // };
 
   private handleChange = (code: string) => {
     this.setState({ code });
@@ -219,4 +222,4 @@ class Playground extends Component<Props, State> {
   };
 }
 
-export default Playground;
+export default withStyles(styles)(Playground);

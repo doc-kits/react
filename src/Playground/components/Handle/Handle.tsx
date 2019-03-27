@@ -1,20 +1,37 @@
-import styled from '@emotion/styled';
-import React from 'react';
+import React, { Component } from 'react';
+import { ClassNames } from '@emotion/core';
 import { MdApps } from 'react-icons/md';
+import withStyles from '../../../toolkit/withStyles';
+import styles from '../../styles';
 
-const StyledHandle = styled.div`
-  ${p => p.theme.mq(p.theme.handle)};
-`;
+interface Props {
+  readonly classes: {
+    [propName: string]: object;
+  };
+  mq: (styles: object) => any;
+}
 
-const Icon = styled(MdApps)`
-  ${p => p.theme.mq(p.theme.handleIcon)};
-`;
+class Handle extends Component<Props, {}> {
+  public static readonly styles = styles;
 
-const Handle = () => (
-  <StyledHandle>
-    <Icon />
-    <Icon />
-  </StyledHandle>
-);
+  public render() {
+    const { classes, mq } = this.props;
 
-export default Handle;
+    return (
+      <ClassNames>
+        {({ css }) => {
+          const c = (style: object) => css(mq(style));
+
+          return (
+            <div className={c(classes.handle)}>
+              <MdApps className={c(classes.handleIcon)} />
+              <MdApps className={c(classes.handleIcon)} />
+            </div>
+          );
+        }}
+      </ClassNames>
+    );
+  }
+}
+
+export default withStyles(styles)(Handle);

@@ -1,37 +1,48 @@
-import styled from '@emotion/styled';
 import React, { Component, Fragment } from 'react';
+import { ClassNames } from '@emotion/core';
 import copy from 'copy-text-to-clipboard';
 import { FiCopy, FiCheck } from 'react-icons/fi';
-import { ICON_SIZE } from '../../styles';
+import withStyles from '../../../toolkit/withStyles';
+import styles, { ICON_SIZE } from '../../styles';
 
 interface Props {
   code: string;
   show: boolean;
   inProgress: boolean;
   toggle: (toggle: string, options?: { withTimeout?: boolean }) => void;
+  readonly classes: {
+    [propName: string]: object;
+  };
+  mq: (styles: object) => any;
 }
 
-const Action = styled.button`
-  ${p => p.theme.mq(p.theme.action)};
-`;
-
-const ActionText = styled.div`
-  ${p => p.theme.mq(p.theme.actionText)};
-`;
-
 class Copy extends Component<Props, {}> {
+  public static readonly styles = styles;
+
   public render() {
-    const { inProgress, show } = this.props;
+    const { inProgress, show, classes, mq } = this.props;
 
     return (
-      <Fragment>
-        {show && (
-          <Action onClick={this.copyContent} disabled={inProgress}>
-            {inProgress ? <FiCheck /> : <FiCopy size={ICON_SIZE} />}
-            <ActionText>Copy</ActionText>
-          </Action>
-        )}
-      </Fragment>
+      <ClassNames>
+        {({ css }) => {
+          const c = (style: object) => css(mq(style));
+
+          return (
+            <Fragment>
+              {show && (
+                <button
+                  className={c(classes.action)}
+                  onClick={this.copyContent}
+                  disabled={inProgress}
+                >
+                  {inProgress ? <FiCheck /> : <FiCopy size={ICON_SIZE} />}
+                  <div className={c(classes.actionText)}>Copy</div>
+                </button>
+              )}
+            </Fragment>
+          );
+        }}
+      </ClassNames>
     );
   }
 
@@ -43,4 +54,4 @@ class Copy extends Component<Props, {}> {
   };
 }
 
-export default Copy;
+export default withStyles(styles)(Copy);

@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import renderer from 'react-test-renderer';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import OptionList from '../../OptionList';
 import Playground from '../Playground';
 
@@ -37,22 +37,34 @@ describe('<Playground />', () => {
   });
 
   it('should set state.code to a string received from children jsx', () => {
-    const wrapper = shallow(
-      <Playground>
-        <Fragment>
-          <div>Playground</div>
-        </Fragment>
-      </Playground>
+    // const wrapper = mount(
+    //   <Playground>
+    //     <Fragment>
+    //       <div>Playground</div>
+    //     </Fragment>
+    //   </Playground>
+    // );
+
+    const wrapper = mount(
+      shallow(
+        <Playground>
+          <Fragment>
+            <div>Playground</div>
+          </Fragment>
+        </Playground>
+      ).get(0)
     );
 
     expect(typeof wrapper.state('code')).toEqual('string');
   });
 
   it('should update state.code when handleChange called', () => {
-    const wrapper = shallow(
-      <Playground>
-        <div>Playground</div>
-      </Playground>
+    const wrapper = mount(
+      shallow(
+        <Playground>
+          <div>Playground</div>
+        </Playground>
+      ).get(0)
     );
 
     (wrapper.instance() as any).handleChange('<div>Different</div>');
@@ -60,10 +72,12 @@ describe('<Playground />', () => {
   });
 
   it('should set state.toggles.showing when toggleCode called', () => {
-    const wrapper = shallow(
-      <Playground>
-        <div>Playground</div>
-      </Playground>
+    const wrapper = mount(
+      shallow(
+        <Playground>
+          <div>Playground</div>
+        </Playground>
+      ).get(0)
     );
 
     (wrapper.instance() as any).toggleCode();
@@ -71,10 +85,12 @@ describe('<Playground />', () => {
   });
 
   it('should setState for specified UI toggle when toggle method called', () => {
-    const wrapper = shallow(
-      <Playground>
-        <div>Playground</div>
-      </Playground>
+    const wrapper = mount(
+      shallow(
+        <Playground>
+          <div>Playground</div>
+        </Playground>
+      ).get(0)
     );
 
     (wrapper.instance() as any).toggle('refreshing');
@@ -84,7 +100,7 @@ describe('<Playground />', () => {
   });
 
   it('should not render specific actions if turned off', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <Playground actions={{ copy: false, refresh: false }}>
         <div>Playground</div>
       </Playground>
@@ -96,7 +112,7 @@ describe('<Playground />', () => {
   });
 
   it('should render a source action if source passed', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <Playground source="source">
         <div>Playground</div>
       </Playground>
@@ -129,7 +145,7 @@ describe('<Playground />', () => {
   });
 
   it('should not render a Handle if mode is containerOnly', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <Playground mode="containerOnly">
         <div>Playground</div>
       </Playground>

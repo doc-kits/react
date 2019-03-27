@@ -1,8 +1,10 @@
-import styled from '@emotion/styled';
 import React, { Component } from 'react';
+import { ClassNames } from '@emotion/core';
 import { EditorChange } from 'codemirror';
 import { Controlled as BaseEditor, IInstance } from 'react-codemirror2';
 import warning from 'warning';
+import withStyles from '../../../toolkit/withStyles';
+import styles from '../../styles';
 import 'codemirror/mode/javascript/javascript.js';
 import 'codemirror/mode/jsx/jsx.js';
 import 'codemirror/lib/codemirror.css';
@@ -11,21 +13,18 @@ interface Props {
   handleChange: (code: string) => void;
   code: string;
   options?: object;
+  readonly classes: {
+    [propName: string]: object;
+  };
+  mq: (styles: object) => any;
 }
 
 interface State {
   code: string;
 }
 
-const CodeMirror = styled(BaseEditor)`
-  ${p => p.theme.mq(p.theme.editor)};
-
-  & .CodeMirror-lines {
-    padding: ${p => p.options && !p.options.lineNumbers && '1.5em'};
-  }
-`;
-
 class Editor extends Component<Props, State> {
+  public static readonly styles = styles;
   public state = { code: this.props.code };
 
   private options = Object.assign(
@@ -50,14 +49,24 @@ class Editor extends Component<Props, State> {
   }
 
   public render() {
+    const { classes, mq } = this.props;
     const { code } = this.state;
 
     return (
-      <CodeMirror
-        value={code}
-        onBeforeChange={this.handleChange}
-        options={this.options}
-      />
+      <ClassNames>
+        {({ css }) => {
+          const c = (style: object) => css(mq(style));
+
+          return (
+            <BaseEditor
+              value={code}
+              className={c(classes.editor)}
+              onBeforeChange={this.handleChange}
+              options={this.options}
+            />
+          );
+        }}
+      </ClassNames>
     );
   }
 
@@ -84,4 +93,4 @@ class Editor extends Component<Props, State> {
   };
 }
 
-export default Editor;
+export default withStyles(styles)(Editor);

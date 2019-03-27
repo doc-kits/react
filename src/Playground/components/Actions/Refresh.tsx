@@ -1,12 +1,17 @@
-import styled from '@emotion/styled';
 import React, { Component } from 'react';
+import { ClassNames } from '@emotion/core';
 import posed from 'react-pose';
 import { FiRefreshCw } from 'react-icons/fi';
-import { ICON_SIZE } from '../../styles';
+import withStyles from '../../../toolkit/withStyles';
+import styles, { ICON_SIZE } from '../../styles';
 
 interface Props {
   toggle: (toggle: string, options?: { withTimeout?: boolean }) => void;
   inProgress: boolean;
+  readonly classes: {
+    [propName: string]: object;
+  };
+  mq: (styles: object) => any;
 }
 
 interface State {
@@ -16,14 +21,6 @@ interface State {
 interface PoseProps {
   rotation: number;
 }
-
-const Action = styled.button`
-  ${p => p.theme.mq(p.theme.action)};
-`;
-
-const ActionText = styled.div`
-  ${p => p.theme.mq(p.theme.actionText)};
-`;
 
 const ActionIcon = posed.div({
   stop: {
@@ -35,24 +32,38 @@ const ActionIcon = posed.div({
 });
 
 class Refresh extends Component<Props, State> {
+  public static readonly styles = styles;
+
   public state = {
     refreshRotation: 0,
   };
 
   public render() {
-    const { inProgress } = this.props;
+    const { inProgress, classes, mq } = this.props;
     const { refreshRotation } = this.state;
 
     return (
-      <Action onClick={this.refresh} disabled={inProgress}>
-        <ActionIcon
-          rotation={refreshRotation}
-          pose={inProgress ? 'start' : 'stop'}
-        >
-          <FiRefreshCw size={ICON_SIZE} />
-        </ActionIcon>
-        <ActionText>Refresh</ActionText>
-      </Action>
+      <ClassNames>
+        {({ css }) => {
+          const c = (style: object) => css(mq(style));
+
+          return (
+            <button
+              className={c(classes.action)}
+              onClick={this.refresh}
+              disabled={inProgress}
+            >
+              <ActionIcon
+                rotation={refreshRotation}
+                pose={inProgress ? 'start' : 'stop'}
+              >
+                <FiRefreshCw size={ICON_SIZE} />
+              </ActionIcon>
+              <div className={c(classes.actionText)}>Refresh</div>
+            </button>
+          );
+        }}
+      </ClassNames>
     );
   }
 
@@ -67,4 +78,4 @@ class Refresh extends Component<Props, State> {
   };
 }
 
-export default Refresh;
+export default withStyles(styles)(Refresh);

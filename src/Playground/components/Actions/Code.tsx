@@ -1,33 +1,40 @@
-import styled from '@emotion/styled';
 import { stripUnit } from 'polished';
 import React, { Component } from 'react';
+import { ClassNames } from '@emotion/core';
 import { FiCode } from 'react-icons/fi';
-import { ICON_SIZE } from '../../styles';
+import withStyles from '../../../toolkit/withStyles';
+import styles, { ICON_SIZE } from '../../styles';
 
 interface Props {
+  readonly classes: {
+    [propName: string]: object;
+  };
+  mq: (styles: object) => any;
   onClick: () => void;
 }
 
-const Action = styled.button`
-  ${p => p.theme.mq(p.theme.action)};
-`;
-
-const ActionText = styled.div`
-  ${p => p.theme.mq(p.theme.actionText)};
-`;
-
 class Code extends Component<Props, {}> {
+  public static readonly styles = styles;
+
   public render() {
-    const { onClick } = this.props;
+    const { classes, mq, onClick } = this.props;
     const iconSize = (stripUnit(ICON_SIZE) as any) * 1.17;
 
     return (
-      <Action onClick={onClick}>
-        <FiCode size={`${iconSize}em`} />
-        <ActionText>Code</ActionText>
-      </Action>
+      <ClassNames>
+        {({ css }) => {
+          const c = (style: object) => css(mq(style));
+
+          return (
+            <button className={c(classes.action)} onClick={onClick}>
+              <FiCode size={`${iconSize}em`} />
+              <div className={c(classes.actionText)}>Code</div>
+            </button>
+          );
+        }}
+      </ClassNames>
     );
   }
 }
 
-export default Code;
+export default withStyles(styles)(Code);
