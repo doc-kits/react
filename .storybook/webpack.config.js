@@ -5,13 +5,9 @@ module.exports = (baseConfig, env, config) => {
     use: [
       {
         loader: require.resolve('babel-loader'),
-        options: {
-          plugins: ['emotion'],
-        },
+        options: { presets: ['@emotion/babel-preset-css-prop'] },
       },
-      {
-        loader: require.resolve('awesome-typescript-loader'),
-      },
+      { loader: require.resolve('awesome-typescript-loader') },
     ],
   });
 

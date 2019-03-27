@@ -37,18 +37,38 @@ The default styles injected into `ColorBox` are shown below.
 
 ```js
 const styles = {
+  root: {
+    boxSizing: 'border-box',
+    fontFamily: [
+      '-apple-system',
+      'BlinkMacSystemFont',
+      '"Segoe UI"',
+      'Muli',
+      '"Helvetica Neue"',
+      'Arial',
+      'sans-serif',
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(','),
+    fontSize: '16px',
+    fontWeight: 400,
+    lineHeight: 1.5,
+    textRendering: 'optimizeLegibility',
+    WebkitFontSmoothing: 'antialiased',
+    MozOsxFontSmoothing: 'grayscale',
+  },
   wrapper: {
-    backgroundColor: 'white',
+    backgroundColor: '#fcfcfc',
     boxShadow: '0px 2px 4px 0px rgba(0, 0, 0, 0.25)',
     color: '#4a6271',
     display: 'flex',
-    fontSize: '1rem',
-    height: ['9.375em', '9.375em', '10.938em'],
-    lineHeight: '1.5',
+    height:  ['9.375em', '9.375em', '10.938em'],
     position: 'relative',
-    width: ['9.375em', '9.375em', '10.938em'],
+    width:  ['9.375em', '9.375em', '10.938em'],
   },
   triangle: {
+    borderColor: `transparent ${prop.hex} transparent transparent`,
     borderStyle: 'solid',
     borderWidth: ['0 125px 125px 0', '0 125px 125px 0', '0 150px 150px 0'],
     height: '0',
@@ -65,7 +85,7 @@ const styles = {
     zIndex: '5',
   },
   icon: {
-    color: '#a8a8a8',
+    color: '#d8d8d8',
     '& svg': {
       width: ['0.750em', '0.750em', '0.875em'],
       height: ['0.750em', '0.750em', '0.875em'],
@@ -82,10 +102,11 @@ const styles = {
     fontSize: ['0.875rem', '0.875rem', '1rem'],
     fontWeight: '600',
     maxWidth: '9.375em',
-  },
+  }
 };
 ```
 
 ## Notes
 
 - You will get the best visual appearance of the component when the `name` is kept to a single line of text at all breakpoints.
+- The `hex` prop currently only supports 3 and 6 digit color values. Alpha transparency hex values are not support yet due to lack of browser support.

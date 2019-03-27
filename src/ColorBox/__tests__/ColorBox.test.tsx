@@ -1,18 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import ColorBox from '../ColorBox';
-
-jest.mock('../../toolkit/constructTheme', () => {
-  return () => ({
-    ui: { text: {} },
-    mq: () => undefined,
-  });
-});
-
-const mock = {
-  componentDidUpdate: jest.spyOn(ColorBox.prototype, 'componentDidUpdate'),
-};
 
 describe('<ColorBox />', () => {
   it('should render with minimum requirements', () => {
@@ -24,25 +13,39 @@ describe('<ColorBox />', () => {
   });
 
   it('should call componentDidUpdate if hex prop changed', () => {
-    const wrapper = shallow(<ColorBox name="Red Barn" hex="#F00000" />);
+    const wrapper = shallow(<ColorBox name="Red Barn" hex="#F00000" />).get(0);
+    const render = mount(wrapper);
 
-    wrapper.setProps({ hex: '#000000' });
-    expect(mock.componentDidUpdate).toHaveBeenCalled();
+    jest.spyOn((wrapper.type as any).prototype, 'componentDidUpdate');
+    render.setProps({ hex: '#000000' });
+
+    expect(
+      (wrapper.type as any).prototype.componentDidUpdate
+    ).toHaveBeenCalled();
   });
 
   it('should update the state and display value when cycleValues triggered', () => {
-    const wrapper = shallow(<ColorBox name="Red Barn" hex="#F00000" />);
+    const wrapper = mount(<ColorBox name="Red Barn" hex="#F00000" />);
 
     wrapper
-      .find('Styled(div)')
-      .at(2)
+      .find('div')
+      .at(3)
+      .simulate('click')
       .simulate('click');
 
     expect(
       wrapper
-        .find('Styled(div)')
-        .at(4)
+        .find('div')
+        .at(5)
         .text()
-    ).toEqual('rgb(240, 0, 0)');
+    ).toEqual('hsl(0, 100%, 47%)');
+  });
+
+  it('should show a transparent triangle color if a invalid hex is passed', () => {
+    const wrapper = shallow(<ColorBox name="Red Barn" hex="#F0000" />).get(0);
+
+    expect(wrapper.props.classes.triangle.borderColor).toEqual(
+      'transparent transparent transparent transparent'
+    );
   });
 });

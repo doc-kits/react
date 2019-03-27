@@ -2,16 +2,6 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import OptionList from '../OptionList';
 
-jest.mock('../../toolkit/constructTheme', () => {
-  return () => ({
-    palette: { primary: {}, grayScale: {} },
-    ui: { link: {}, text: {} },
-    required: {},
-    optional: {},
-    mq: () => undefined,
-  });
-});
-
 describe('<OptionList />', () => {
   it('should render with minimum requirements', () => {
     const tree = renderer

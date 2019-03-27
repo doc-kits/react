@@ -32,15 +32,17 @@ Each component can be imported by name like shown above. See the demo section be
 
 **Usage Documentation**
 
-- [Theme Options](docs/theme-options.md)
-- [Overriding & Extending Styles](docs/override-extend-styles.md)
-- [Emotion & Facepaint](docs/emotion-facepaint.md)
-- [Fonts](docs/fonts.md)
 - [Integration with Documentation Engines](docs/integration-with-engines.md)
+  - [Docz](docs/integration-with-engines.md#docz)
+  - [Styleguidist](docs/integration-with-engines.md#styleguidist)
+- [Overriding & Extending Styles](docs/override-extend-styles.md)
+  - [withStyles](docs/override-extend-styles.md#withStyles)
+  - [style](docs/override-extend-styles.md#style)
+- [Utilizing Media Queries](docs/media-queries.md)
+- [Fonts](docs/fonts.md)
 
 ## Available Components
 
-- [Playground](src/Playground/README.md)
 - [Option List](src/OptionList/README.md)
 - [Color Box](src/ColorBox/README.md)
 

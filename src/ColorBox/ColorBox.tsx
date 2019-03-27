@@ -1,16 +1,19 @@
-import styled from '@emotion/styled';
-import React, { Component } from 'react';
-import { ThemeProvider } from 'emotion-theming';
+/** @jsx jsx */
+import { jsx, css } from '@emotion/core';
+import { Component } from 'react';
 import { FiRefreshCw } from 'react-icons/fi';
 import { getRgb, hexToRgb, rgbToHsl } from './utils/color-conversions';
-import constructTheme from '../toolkit/constructTheme';
+import withStyles from '../toolkit/withStyles';
 import defaultStyles from './styles';
 
 interface Props {
   name: string;
   hex: string;
-  readonly withStyles?: object;
-  styles?: object;
+  readonly classes: {
+    [propName: string]: object;
+  };
+  readonly mq: (styles: object) => any;
+  readonly styles: object;
   [propName: string]: any;
 }
 
@@ -19,39 +22,14 @@ interface State {
   value: string;
 }
 
-const Wrapper = styled.div`
-  ${p => p.theme.mq(p.theme.wrapper)};
-`;
-
-const Triangle = styled.div`
-  ${p => p.theme.mq(p.theme.triangle)};
-
-  border-color: transparent ${p => p.color} transparent transparent;
-`;
-
-const Text = styled.div`
-  ${p => p.theme.mq(p.theme.text)};
-`;
-
-const Icon = styled.div`
-  ${p => p.theme.mq(p.theme.icon)};
-`;
-
-const ColorValue = styled.div`
-  ${p => p.theme.mq(p.theme.colorValue)};
-`;
-
-const Name = styled.div`
-  ${p => p.theme.mq(p.theme.name)};
-`;
-
 class ColorBox extends Component<Props, State> {
   public static defaultProps = {
     hex: '',
     name: '',
   };
 
-  private static isValidHex = /^#[0-9a-f]{3}(?:[0-9a-f]{3})?$/i;
+  public static isValidHex = /^#[0-9a-f]{3}(?:[0-9a-f]{3})?$/i;
+  public static readonly styles = defaultStyles;
 
   public readonly state = {
     clicks: 1,
@@ -67,25 +45,30 @@ class ColorBox extends Component<Props, State> {
   }
 
   public render() {
-    const { name, hex, withStyles, styles, ...restOfProps } = this.props;
+    const { name, hex, classes, mq, styles, ...restOfProps } = this.props;
     const { value } = this.state;
 
-    const componentTheme = () =>
-      constructTheme(defaultStyles, withStyles, styles);
+    const rootClass = css(mq(classes.root));
+    const wrapperClass = css(mq(classes.wrapper));
+    const triangleClass = css(mq(classes.triangle));
+    const textClass = css(mq(classes.text));
+    const iconClass = css(mq(classes.icon));
+    const colorValueClass = css(mq(classes.colorValue));
+    const nameClass = css(mq(classes.name));
 
     return (
-      <ThemeProvider theme={componentTheme}>
-        <Wrapper {...restOfProps}>
-          <Triangle color={value} />
-          <Text onClick={this.cycleValues}>
-            <Icon>
+      <div css={rootClass} {...restOfProps}>
+        <div css={wrapperClass}>
+          <div css={triangleClass} />
+          <div css={textClass} onClick={this.cycleValues}>
+            <div css={iconClass}>
               <FiRefreshCw />
-            </Icon>
-            <ColorValue>{value}</ColorValue>
-            <Name>{name}</Name>
-          </Text>
-        </Wrapper>
-      </ThemeProvider>
+            </div>
+            <div css={colorValueClass}>{value}</div>
+            <div css={nameClass}>{name}</div>
+          </div>
+        </div>
+      </div>
     );
   }
 
@@ -119,4 +102,4 @@ class ColorBox extends Component<Props, State> {
   };
 }
 
-export default ColorBox;
+export default withStyles(defaultStyles)(ColorBox);

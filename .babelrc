@@ -1,11 +1,11 @@
 {
   "presets": [
-    ["@babel/env", { "modules": "cjs" }],
+    ["@babel/preset-env", { "modules": false }],
     "@babel/preset-typescript",
-    "@babel/preset-react"
+    "@babel/preset-react",
+    "@emotion/babel-preset-css-prop"
   ],
   "plugins": [
-    "emotion",
     "@babel/proposal-class-properties",
     "@babel/proposal-object-rest-spread",
     "@babel/plugin-syntax-dynamic-import"

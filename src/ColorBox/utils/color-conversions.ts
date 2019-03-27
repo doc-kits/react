@@ -3,7 +3,7 @@ export const getRgb = (value: string) => {
     value = value.substr(1);
   }
 
-  if (value.length < 2 || value.length > 6) {
+  if (value.length < 3 || value.length > 6) {
     return [];
   }
 
@@ -12,11 +12,7 @@ export const getRgb = (value: string) => {
   let g;
   let b;
 
-  if (value.length === 2) {
-    r = parseInt(values[0].toString() + values[1].toString(), 16);
-    g = r;
-    b = r;
-  } else if (value.length === 3) {
+  if (value.length === 3) {
     r = parseInt(values[0].toString() + values[0].toString(), 16);
     g = parseInt(values[1].toString() + values[1].toString(), 16);
     b = parseInt(values[2].toString() + values[2].toString(), 16);
