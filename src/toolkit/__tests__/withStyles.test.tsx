@@ -43,6 +43,7 @@ describe('withStyles', () => {
 
   it('should forward ref from original component onto WrappedComponent', () => {
     class NewComponent extends Component {
+      public static readonly styles = {};
       public render() {
         return <div>Test</div>;
       }
