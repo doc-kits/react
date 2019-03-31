@@ -3,8 +3,9 @@ name: Examples
 route: /
 ---
 
-import ColorBox from '../src/components/create-media-queries';
-// import { ColorBox } from '@doc-kits/react';
+import { ColorBox } from '@doc-kits/react';
+import Showcase from '../src/components/composing-component';
+// import ColorBox from '../src/components/withstyles-hoc';
 
 <!--
   You may change the statement above to import a different ColorBox
@@ -21,20 +22,29 @@ There are several variations of integration shown to highlight the different app
 
 The examples show the following scenarios:
 
-- Direct integration
+- Direct integration _(shown below)_
 - `withStyles` HOC
 - `withStyles` HOC Shorthand
 - `withStyles` HOC with Props
-- `styles` prop
+- `styles` prop _(shown below)_
 - Using Facepaint to create your own media queries
+- Composing a larger component using `ColorBox` inside of it
 
 You will find code for the variations in the `src/components/` folder.
 
 ## ColorBox
 
 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-  <ColorBox name="Red Barn" hex="#F00000" />
+  <ColorBox name="Red Barn" hex="#F00000" mode="dark" />
   <ColorBox name="Cream Popsicle" hex="#F09320" />
   <ColorBox name="Sky Blue" hex="#00AAE5" />
-  <ColorBox name="Lavender" hex="#977BB6" />
+  <ColorBox
+    name="Lavender"
+    hex="#977BB6"
+    styles={{ colorValue: { color: 'gray' } }}
+  />
 </div>
+
+## Composing Component
+
+<Showcase />

@@ -1,14 +1,10 @@
 import { withStyles, ColorBox } from '@doc-kits/react';
 
-export default withStyles({
-  // Overriding 'wrapper' and 'name' styles
+const styles = props => ({
   wrapper: {
-    color: 'black',
+    backgroundColor: props.mode === 'dark' ? 'gray' : 'white',
+    color: props.mode === 'dark' ? 'white' : 'black',
   },
-  name: {
-    fontWeight: '400',
-    // Extending 'name' styles with 'text-transform'
-    // 'textTransform' is not in default styles
-    textTransform: 'lowercase',
-  },
-})(ColorBox);
+});
+
+export default withStyles(styles)(ColorBox);
