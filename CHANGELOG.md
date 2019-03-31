@@ -1,3 +1,11 @@
+# [1.7.0](https://github.com/doc-kits/react/compare/v1.6.0...v1.7.0) (2019-03-31)
+
+
+### Features
+
+* more updates ([#180](https://github.com/doc-kits/react/issues/180)) ([f7c5737](https://github.com/doc-kits/react/commit/f7c5737))
+* restructure components ([#185](https://github.com/doc-kits/react/issues/185)) ([91dc4d5](https://github.com/doc-kits/react/commit/91dc4d5))
+
 # [1.6.0](https://github.com/doc-kits/react/compare/v1.5.3...v1.6.0) (2019-03-20)
 
 
