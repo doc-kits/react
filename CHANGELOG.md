@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/doc-kits/react/compare/v1.7.0...v1.8.0) (2019-03-31)
+
+
+### Features
+
+* add classes to withStyles ([#186](https://github.com/doc-kits/react/issues/186)) ([a34661e](https://github.com/doc-kits/react/commit/a34661e))
+
 # [1.7.0](https://github.com/doc-kits/react/compare/v1.6.0...v1.7.0) (2019-03-31)
 
 
