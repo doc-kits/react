@@ -61,42 +61,85 @@ The default styles injected into `OptionList` are shown below.
 
 ```js
 const styles = {
+  root: {
+    boxSizing: 'border-box',
+    fontFamily: [
+      '-apple-system',
+      'BlinkMacSystemFont',
+      '"Segoe UI"',
+      'Muli',
+      '"Helvetica Neue"',
+      'Arial',
+      'sans-serif',
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(','),
+    fontSize: '16px',
+    fontWeight: 400,
+    lineHeight: 1.5,
+    textRendering: 'optimizeLegibility',
+    WebkitFontSmoothing: 'antialiased',
+    MozOsxFontSmoothing: 'grayscale',
+  },
   wrapper: {
-    borderBottom: '1px solid #cbd8de',
+    borderBottom: '1px solid #d8d8d8',
     color: '#4a6271',
     fontSize: ['0.875rem', '0.875rem', '1rem'],
-    lineHeight: '1.5',
+    '& a': {
+      color: '#0099e5',
+      textDecoration: 'none',
+      '& hover': {
+        textDecoration: 'underline',
+      },
+      '& active': {
+        color: '#0099e5',
+      },
+    },
   },
   title: {
+    borderBottom: '1px solid #d8d8d8',
     color: '#4a6271',
     fontSize: 'inherit',
-    borderBottom: '1px solid #cbd8de',
     paddingBottom: '0.313em',
     textTransform: 'uppercase',
   },
   option: {
-    borderTop: '1px solid #edf3f3',
+    borderTop: '1px solid #f0f0f0',
     padding: '1.143em 0',
+  },
+  info: {
+    alignItems: 'baseline',
+    display: 'flex',
+    '& div': {
+      marginRight: '0.357em',
+      '& last-of-type': {
+        marginRight: 0,
+      },
+    },
   },
   key: {
     color: '#334049',
     fontSize: 'inherit',
-    fontWeight: '500',
+    fontWeight: '600',
   },
   optional: {
-    color: '#939da3',
-    fontSize: '1em',
+    border: 'none',
+    color: '#989898',
+    fontSize: '1rem',
+    padding: 0,
+    textTransform: 'none',
   },
   required: {
-    color: '#ffae54',
-    fontSize: '0.857em',
-    border: '1px solid #ffae54',
+    border: '1px solid #eb742c',
     borderRadius: '10px',
+    color: '#eb742c',
+    fontSize: '0.875em',
     padding: '0 0.571em',
     textTransform: 'uppercase',
   },
   type: {
-    color: '#939da3',
+    color: '#989898',
     fontSize: 'inherit',
   },
   description: {
@@ -105,18 +148,28 @@ const styles = {
     margin: '1em 0 0 0',
   },
   values: {
-    color: '#939da3',
+    color: '#989898',
+    'span:not(:first-of-type)::before': {
+      content: '", "',
+    },
+    'span:nth-last-of-type(2):not(:first-of-type)::after': {
+      content: '","',
+    },
+    'span:last-child:not(:only-of-type)::before': {
+      content: '" or "',
+      color: '#4a6271',
+    },
+    'div:nth-of-type(1)': {
+      marginBottom: '0.25em',
+    },
   },
   code: {
-    backgroundColor: '#fafcfc',
+    backgroundColor: codeBg,
+    border: '1px solid #eaf2f2',
     borderRadius: '3px',
-    border: `1px solid ${darken(0.05, '#fafcfc')}`,
-    color: '#b93d6a',
-    padding: '0 0.4em',
+    color: '#d73347',
     fontFamily: 'inherit',
-  },
-  palette: {
-    link: '#0099e5',
+    padding: '0 0.4em',
   },
 };
 ```

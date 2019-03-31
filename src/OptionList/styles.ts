@@ -1,26 +1,47 @@
 import { darken } from 'polished';
-import { base, palette, ui } from '../toolkit/theme';
+import base, { colors } from '../toolkit/theme';
 
-const codeBg = '#fafcfc';
+const palette = {
+  codeBg: '#fafcfc',
+};
 
-const styles = {
+const styles = (props: any) => ({
+  root: { ...base },
   wrapper: {
-    ...base,
-    borderBottom: `1px solid ${palette.grayScale['200']}`,
-    color: ui.text.color,
+    borderBottom: `1px solid ${colors.grayScale['200']}`,
+    color: colors.gray,
     fontSize: ['0.875rem', '0.875rem', '1rem'],
-    lineHeight: '1.5',
+    '& a': {
+      color: colors.blue,
+      textDecoration: 'none',
+      '&:hover': {
+        textDecoration: 'underline',
+      },
+      '&:active': {
+        color: colors.blue,
+      },
+    },
   },
   title: {
-    borderBottom: `1px solid ${palette.grayScale['200']}`,
-    color: ui.text.color,
+    borderBottom: `1px solid ${colors.grayScale['200']}`,
+    color: colors.gray,
     fontSize: 'inherit',
     paddingBottom: '0.313em',
     textTransform: 'uppercase',
   },
   option: {
-    borderTop: `1px solid ${palette.grayScale['100']}`,
+    borderTop: `1px solid ${colors.grayScale['100']}`,
     padding: '1.143em 0',
+  },
+  info: {
+    alignItems: 'baseline',
+    display: 'flex',
+    '& div': {
+      marginRight: '0.357em',
+      '& last-of-type': {
+        marginRight: 0,
+      },
+    },
   },
   key: {
     color: '#334049',
@@ -28,18 +49,22 @@ const styles = {
     fontWeight: '600',
   },
   optional: {
-    color: palette.grayScale['400'],
+    border: 'none',
+    color: colors.grayScale['400'],
+    fontSize: '1em',
+    padding: 0,
+    textTransform: 'none',
   },
   required: {
-    border: `1px solid ${palette.primary.orange}`,
+    border: `1px solid ${colors.orange}`,
     borderRadius: '10px',
-    color: palette.primary.orange,
-    fontSize: '0.875em',
+    color: colors.orange,
+    fontSize: '0.813em',
     padding: '0 0.571em',
     textTransform: 'uppercase',
   },
   type: {
-    color: palette.grayScale['400'],
+    color: colors.grayScale['400'],
     fontSize: 'inherit',
   },
   description: {
@@ -48,16 +73,29 @@ const styles = {
     margin: '1em 0 0 0',
   },
   values: {
-    color: palette.grayScale['400'],
+    color: colors.grayScale['400'],
+    'span:not(:first-of-type)::before': {
+      content: '", "',
+    },
+    'span:nth-last-of-type(2):not(:first-of-type)::after': {
+      content: '","',
+    },
+    'span:last-child:not(:only-of-type)::before': {
+      content: '" or "',
+      color: colors.gray,
+    },
+    'div:nth-of-type(1)': {
+      marginBottom: '0.25em',
+    },
   },
   code: {
-    backgroundColor: codeBg,
-    border: `1px solid ${darken(0.05, codeBg)}`,
+    backgroundColor: palette.codeBg,
+    border: `1px solid ${darken(0.05, palette.codeBg)}`,
     borderRadius: '3px',
-    color: palette.primary.red,
+    color: colors.red,
     fontFamily: 'inherit',
     padding: '0 0.4em',
   },
-};
+});
 
 export default styles;

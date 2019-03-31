@@ -1,36 +1,41 @@
 import React, { Component } from 'react';
 import renderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
 import withStyles from '../withStyles';
 
 describe('withStyles', () => {
   it('should render a wrapped component from the HOC', () => {
     interface Props {
-      withStyles: {
-        color: string;
+      classes: {
+        wrapper: object;
       };
+      mq: (styles: object) => any;
     }
 
+    const styles = { root: { color: 'blue' } };
+
     class NewComponent extends Component<Props> {
+      public static readonly styles = styles;
       public render() {
-        return this.props.withStyles.color;
+        return <div style={this.props.classes.wrapper} />;
       }
     }
 
-    const ComponentWithStyles = withStyles({ color: 'blue' })(NewComponent);
-    const wrapper = renderer.create(<ComponentWithStyles />).toJSON();
+    const ComponentWithStyles = withStyles(styles)(NewComponent);
+    const wrapper = shallow(<ComponentWithStyles />);
 
-    expect(wrapper).toBe('blue');
+    expect(wrapper.props().classes.root).toMatchObject({ color: 'blue' });
   });
 
   it('should hoist non-react static class properties', () => {
     class NewComponent extends Component {
-      public static displayName = 'foo';
+      public static displayName = 'Foo';
       public static someSpecialStatic = 'bar';
     }
 
     const ComponentWithStyles = withStyles({})(NewComponent);
 
-    expect(ComponentWithStyles.displayName).toBe('WithStyles(foo)');
+    expect(ComponentWithStyles.displayName).toBe('WithStyles(Foo)');
     expect(ComponentWithStyles.someSpecialStatic).toBe(
       NewComponent.someSpecialStatic
     );
