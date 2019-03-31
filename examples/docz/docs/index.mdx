@@ -4,15 +4,10 @@ route: /
 ---
 
 import { ColorBox } from '@doc-kits/react';
+import ColorBoxHoc from '../src/components/withstyles-hoc';
+import ColorBoxHocProps from '../src/components/withstyles-hoc-props';
+import ColorBoxShorthand from '../src/components/withstyles-hoc-shorthand';
 import Showcase from '../src/components/composing-component';
-// import ColorBox from '../src/components/withstyles-hoc';
-
-<!--
-  You may change the statement above to import a different ColorBox
-  component example from the 'src/components' directory.
-
-  i.e.  import ColorBox from 'src/components/styles-prop';
- -->
 
 # Examples
 
@@ -22,28 +17,43 @@ There are several variations of integration shown to highlight the different app
 
 The examples show the following scenarios:
 
-- Direct integration _(shown below)_
+- Direct integration
 - `withStyles` HOC
 - `withStyles` HOC Shorthand
 - `withStyles` HOC with Props
-- `styles` prop _(shown below)_
-- Using Facepaint to create your own media queries
+- `styles` prop
 - Composing a larger component using `ColorBox` inside of it
 
 You will find code for the variations in the `src/components/` folder.
 
-## ColorBox
+## Direct Integration
 
 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-  <ColorBox name="Red Barn" hex="#F00000" mode="dark" />
+  <ColorBox name="Red Barn" hex="#F00000" />
   <ColorBox name="Cream Popsicle" hex="#F09320" />
   <ColorBox name="Sky Blue" hex="#00AAE5" />
-  <ColorBox
-    name="Lavender"
-    hex="#977BB6"
-    styles={{ colorValue: { color: 'gray' } }}
-  />
+  <ColorBox name="Lavender" hex="#977BB6" />
 </div>
+
+## Higher-Order Component
+
+<ColorBoxHoc name="Red Barn" hex="#F00000" />
+
+## HOC With Props
+
+<ColorBoxHocProps name="Sky Blue" hex="#00AAE5" mode="dark" />
+
+## HOC Shorthand
+
+<ColorBoxShorthand name="Cream Popsicle" hex="#F09320" />
+
+## Using the `styles` Prop
+
+<ColorBox
+  name="Lavender"
+  hex="#977BB6"
+  styles={{ colorValue: { color: 'gray' } }}
+/>
 
 ## Composing Component
 
