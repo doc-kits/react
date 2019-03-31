@@ -6,6 +6,7 @@ import { breakpoints } from '../toolkit/theme';
 
 interface Props {
   styles: object;
+  classes: object;
 }
 
 const withStyles = (styles: any) => (WrappedComponent: any): any => {
@@ -13,9 +14,14 @@ const withStyles = (styles: any) => (WrappedComponent: any): any => {
     WrappedComponent.displayName || WrappedComponent.name || 'Component';
 
   const WithStyles = React.forwardRef((props: Props, ref) => {
-    const derivedStyles = typeof styles === 'function' ? styles(props) : styles;
-    const classes = merge(WrappedComponent.styles, derivedStyles, props.styles);
     const mq = facepaint(breakpoints);
+    const derivedStyles = typeof styles === 'function' ? styles(props) : styles;
+    const classes = merge.all([
+      WrappedComponent.styles,
+      derivedStyles,
+      { ...props.classes },
+      { ...props.styles },
+    ]);
 
     return <WrappedComponent {...props} ref={ref} classes={classes} mq={mq} />;
   });

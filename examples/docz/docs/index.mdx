@@ -1,10 +1,40 @@
 ---
-name: Home
+name: Examples
 route: /
 ---
 
-# Home
+import ColorBox from '../src/components/create-media-queries';
+// import { ColorBox } from '@doc-kits/react';
 
-Select a component from the sidebar menu to view example integrations of [Doc Kits: React](https://github.com/doc-kits/react) into Docz.
+<!--
+  You may change the statement above to import a different ColorBox
+  component example from the 'src/components' directory.
 
-**Note:** View the `ColorBox` example code to see how you might override and extend a component's styles via the `withStyles` HOC.
+  i.e.  import ColorBox from 'src/components/styles-prop';
+ -->
+
+# Examples
+
+The [ColorBox](https://github.com/doc-kits/react/tree/master/src/ColorBox) component is used as an example,
+however, the process shown here is the same for any [Doc Kits: React](https://github.com/doc-kits/react) component.
+There are several variations of integration shown to highlight the different approaches.
+
+The examples show the following scenarios:
+
+- Direct integration
+- `withStyles` HOC
+- `withStyles` HOC Shorthand
+- `withStyles` HOC with Props
+- `styles` prop
+- Using Facepaint to create your own media queries
+
+You will find code for the variations in the `src/components/` folder.
+
+## ColorBox
+
+<div style={{ display: 'flex', justifyContent: 'space-between' }}>
+  <ColorBox name="Red Barn" hex="#F00000" />
+  <ColorBox name="Cream Popsicle" hex="#F09320" />
+  <ColorBox name="Sky Blue" hex="#00AAE5" />
+  <ColorBox name="Lavender" hex="#977BB6" />
+</div>
