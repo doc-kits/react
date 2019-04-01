@@ -78,7 +78,7 @@
     "@types/react-test-renderer": "16.8.1",
     "@types/storybook-readme": "4.0.0",
     "@types/storybook__addon-actions": "3.4.2",
-    "@types/storybook__addon-knobs": "4.0.2",
+    "@types/storybook__addon-knobs": "4.0.4",
     "@types/storybook__addon-options": "3.2.3",
     "@types/storybook__react": "4.0.1",
     "@types/warning": "3.0.0",
