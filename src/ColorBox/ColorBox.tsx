@@ -60,11 +60,13 @@ class ColorBox extends Component<Props, State> {
       <div css={rootClass} {...restOfProps}>
         <div css={wrapperClass}>
           <div css={triangleClass} />
-          <div css={textClass} onClick={this.cycleValues}>
-            <div css={iconClass}>
+          <div css={textClass}>
+            <div css={iconClass} onClick={this.cycleValues}>
               <FiRefreshCw />
             </div>
-            <div css={colorValueClass}>{value}</div>
+            <div css={colorValueClass} onClick={this.cycleValues}>
+              {value}
+            </div>
             <div css={nameClass}>{name}</div>
           </div>
         </div>

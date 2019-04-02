@@ -1,8 +1,8 @@
 import React from 'react';
-import { addDecorator, configure } from '@storybook/react';
+import { addDecorator, addParameters, configure } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { withViewport } from '@storybook/addon-viewport';
-import { withOptions } from '@storybook/addon-options';
+import { withConsole } from '@storybook/addon-console';
+import { create } from '@storybook/theming';
 
 // inject custom css to all stories
 addDecorator(story => (
@@ -19,13 +19,29 @@ addDecorator(story => (
 
 // setup global addons
 addDecorator(withKnobs);
-addDecorator(withViewport);
-addDecorator(
-  withOptions({
-    name: 'Doc Kits: React',
-    url: 'https://github.com/doc-kits/react',
-  })
-);
+addDecorator((storyFn, context) => withConsole()(storyFn)(context));
+addParameters({
+  options: {
+    isFullscreen: false,
+    showNav: true,
+    showPanel: true,
+    panelPosition: 'bottom',
+    sortStoriesByKind: false,
+    hierarchySeparator: /\/|\./,
+    hierarchyRootSeparator: /\|/,
+    sidebarAnimations: true,
+    enableShortcuts: true,
+    isToolshown: true,
+    theme: create({
+      base: 'light',
+      brandTitle: 'Doc Kits: React',
+      brandUrl: 'https://github.com/doc-kits/react',
+      brandImage:
+        'https://raw.githubusercontent.com/doc-kits/react/master/images/storybook-logo.png?raw=true',
+      gridCellSize: 8,
+    }),
+  },
+});
 
 // automatically import all storybook files
 const req = require.context('../src', true, /.stories.(ts|tsx)$/);

@@ -29,7 +29,7 @@ describe('<ColorBox />', () => {
 
     wrapper
       .find('div')
-      .at(3)
+      .at(4)
       .simulate('click')
       .simulate('click');
 
