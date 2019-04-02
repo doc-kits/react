@@ -28,7 +28,6 @@ const styles = (props: any) => {
       width: '0',
     },
     text: {
-      cursor: 'pointer',
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'flex-end',
@@ -41,9 +40,11 @@ const styles = (props: any) => {
         width: ['0.750em', '0.750em', '0.875em'],
         height: ['0.750em', '0.750em', '0.875em'],
       },
+      cursor: 'pointer',
     },
     colorValue: {
       color: colors.grayScale['300'],
+      cursor: 'pointer',
       fontSize: ['0.625rem', '0.625rem', '0.750rem'],
       marginBottom: '0.857em',
       maxWidth: '11.071em',

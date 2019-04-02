@@ -11,11 +11,11 @@ exports[`<ColorBox /> should render with minimum requirements 1`] = `
       className="css-1ofm5fa"
     />
     <div
-      className="css-v30szl"
-      onClick={[Function]}
+      className="css-165tyfz"
     >
       <div
-        className="css-15ru5hp"
+        className="css-1u5jm93"
+        onClick={[Function]}
       >
         <svg
           fill="none"
@@ -45,7 +45,8 @@ exports[`<ColorBox /> should render with minimum requirements 1`] = `
         </svg>
       </div>
       <div
-        className="css-uy2ans"
+        className="css-1nu6r2s"
+        onClick={[Function]}
       >
         #F00000
       </div>
