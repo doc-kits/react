@@ -11,7 +11,7 @@
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
-    "@doc-kits/react": "^1.8.0",
+    "@doc-kits/react": "latest",
     "babel-loader": "^8.0.5",
     "css-loader": "^2.1.1",
     "react-styleguidist": "^9.0.4",
