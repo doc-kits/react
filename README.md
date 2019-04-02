@@ -9,6 +9,8 @@
   <img src="https://img.shields.io/travis/com/doc-kits/react/master.svg" alt="CI Build">
 </p>
 
+**v2.0.0 has been released and is considered the first fully stable version of Doc Kits: React.** This library will move forward in a predictable way from this point. Note, that due to some major flaws the `Playground` was removed in v2.0.0 but will be reintroduced in a much better way in a future version update soon.
+
 ## 💅 Features
 
 - Components can easily be integrated into documentation frameworks like [Docz](https://www.docz.site/), [Styleguidist](https://react-styleguidist.js.org/), and more.
