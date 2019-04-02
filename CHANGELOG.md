@@ -1,3 +1,22 @@
+# [2.0.0](https://github.com/doc-kits/react/compare/v1.6.0...v2.0.0) (2019-04-02)
+
+
+### Features
+
+* add classes to withStyles ([#186](https://github.com/doc-kits/react/issues/186)) ([a34661e](https://github.com/doc-kits/react/commit/a34661e))
+* more updates ([#180](https://github.com/doc-kits/react/issues/180)) ([f7c5737](https://github.com/doc-kits/react/commit/f7c5737))
+* release of v2.0.0 ([#191](https://github.com/doc-kits/react/issues/191)) ([77674f6](https://github.com/doc-kits/react/commit/77674f6))
+* restructure components ([#185](https://github.com/doc-kits/react/issues/185)) ([91dc4d5](https://github.com/doc-kits/react/commit/91dc4d5))
+
+
+### BREAKING CHANGES
+
+* v2.0.0 is considered the first stable version of Doc Kits: React and will move forward in a predictable way from this point.
+
+- The `Playground` component has been removed due to some major flaws but will be re-added in a much better and flexible way in a future version.
+- The `withStyles` HOC to override styling went through major changes under the hood. It is now stable and working correctly. Refer to the docs for correct use cases.
+- Several breakpoints have been added for flexibility due to the fact that users will no longer be able to create their own breakpoints via Facepaint.
+
 # [1.8.0](https://github.com/doc-kits/react/compare/v1.7.0...v1.8.0) (2019-03-31)
 
 
