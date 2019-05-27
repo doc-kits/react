@@ -82,7 +82,7 @@
     "@types/storybook__react": "4.0.1",
     "@types/warning": "3.0.0",
     "awesome-typescript-loader": "5.2.1",
-    "babel-loader": "8.0.5",
+    "babel-loader": "8.0.6",
     "enzyme": "3.9.0",
     "enzyme-adapter-react-16": "1.11.2",
     "gh-pages": "2.0.1",
