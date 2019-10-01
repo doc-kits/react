@@ -105,7 +105,7 @@
     "tslint-config-prettier": "1.18.0",
     "tslint-react": "3.6.0",
     "typescript": "3.3.3333",
-    "webpack": "4.29.6"
+    "webpack": "4.41.0"
   },
   "dependencies": {
     "@emotion/babel-preset-css-prop": "^10.0.9",
