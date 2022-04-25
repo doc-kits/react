@@ -79,7 +79,7 @@
     "@types/storybook-readme": "5.0.0",
     "@types/storybook__addon-actions": "3.4.2",
     "@types/storybook__addon-knobs": "4.0.4",
-    "@types/storybook__react": "4.0.1",
+    "@types/storybook__react": "4.0.2",
     "@types/warning": "3.0.0",
     "awesome-typescript-loader": "5.2.1",
     "babel-loader": "8.0.5",
