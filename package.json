@@ -77,7 +77,7 @@
     "@types/react-dom": "16.8.3",
     "@types/react-test-renderer": "16.8.1",
     "@types/storybook-readme": "5.0.0",
-    "@types/storybook__addon-actions": "3.4.2",
+    "@types/storybook__addon-actions": "3.4.3",
     "@types/storybook__addon-knobs": "4.0.4",
     "@types/storybook__react": "4.0.1",
     "@types/warning": "3.0.0",
