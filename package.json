@@ -68,7 +68,7 @@
     "@storybook/addon-knobs": "5.0.6",
     "@storybook/react": "5.0.6",
     "@storybook/theming": "5.0.6",
-    "@types/deepmerge": "2.2.0",
+    "@types/deepmerge": "2.2.3",
     "@types/enzyme": "3.9.1",
     "@types/enzyme-adapter-react-16": "1.0.5",
     "@types/hoist-non-react-statics": "3.3.0",
